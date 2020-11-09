@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Character
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Main\ here.\ @author\ (your\ name)\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Character()
+comment1.text=\r\n\ stores\ the\ image\ for\ the\ character\ and\ the\ character\ while\ he\ is\ shooting\ in\ variables\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Main\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ faceMouse()
+comment3.text=\r\n\ This\ method\ makes\ the\ actor\ always\ face\ the\ direction\ of\ where\ the\ mouse\ is\ pointing.\r\n
+comment4.params=
+comment4.target=void\ move()
+comment4.text=\r\n\ controls\ the\ speed\ and\ the\ movement\ of\ the\ main\ character\ with\ the\ "w,a,s,d"\ keys\r\n
+comment5.params=
+comment5.target=void\ switchImage()
+comment5.text=\r\n\ switches\ to\ shooting\ image\ when\ left\ click\ is\ pressed\r\n
+numComments=6
