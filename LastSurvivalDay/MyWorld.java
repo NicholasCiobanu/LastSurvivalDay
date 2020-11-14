@@ -20,22 +20,20 @@ public class MyWorld extends World
         super(1000, 600, 1); 
         addObject(main,325,180);
         prepare();
-        spawn();
-    }
-    public void act()
-    {
         
     }
-    public void spawn()
+    
+    public void act()
     {
         int count = 0;
-      while(count <= 20)
+      while(count < 20)
       {
       if(Greenfoot.getRandomNumber(100)== 1)
     {
       addObject(new Zombies(main) , Greenfoot.getRandomNumber(1000), 400);
       count++;
     }
+    count++;
     }
     }
     /**
