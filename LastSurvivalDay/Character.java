@@ -46,19 +46,18 @@ public class Character extends Actor
     /**
      * controls the speed and the movement of the main character with the "w,a,s,d" keys
      */
-    private void move()
-    {
+    private void move(){
         if (Greenfoot.isKeyDown("a")) {
-            setLocation(getX() - speed, getY());
+            setLocation(getX() - speed,getY());
         }
         if (Greenfoot.isKeyDown("d")) {
-            setLocation(getX() + speed, getY());
+            setLocation(getX() + speed,getY());
         }
         if (Greenfoot.isKeyDown("w")) {
-            setLocation(getX(), getY() - speed);
+            setLocation(getX(),getY()- speed);
         }
         if (Greenfoot.isKeyDown("s")) {
-            setLocation(getX(), getY() + speed);
+            setLocation(getX() ,getY()+ speed);
         }
     }
 

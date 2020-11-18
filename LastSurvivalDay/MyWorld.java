@@ -1,47 +1,56 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import lang.stride.*;
+import greenfoot.*;
 
 /**
  * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (your name) @version (a version number or a date)
  */
 public class MyWorld extends World
-{   int spawnSpeed = 3;
-    int speedRate = 0;
-    public Character main = new Character();
+{
+    /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
+    protected int spawnSpeed = 3;
+    protected int speedRate = 0;
+    public Character main =  new  Character();
+
     /**
      * Constructor for objects of class MyWorld.
-     * 
      */
     public MyWorld()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 600, 1); 
-        addObject(main,325,180);
+    {
+        super(1000, 600, 1);
+        /* Create a new world with 1000x600 cells with a cell size of 1x1 pixels.*/
+        addObject(main, 325, 180);
+        showText("Level 1, Forest",70,10);
         prepare();
-        
     }
-    
+
+    /**
+     * 
+     */
     public void act()
     {
         int count = 0;
-      while(count < 20)
-      {
-      if(Greenfoot.getRandomNumber(100)== 1)
-    {
-      addObject(new Zombies(main) , Greenfoot.getRandomNumber(1000), 400);
-      count++;
+        boolean addObject = true;
+        while (count < 20) {
+            if (addObject = true && Greenfoot.getRandomNumber(200) == 1) {
+                addObject( new Zombies(main), Greenfoot.getRandomNumber(1000), 400);
+                count++;
+                
+            }
+            count++;
+            if (count == 20)
+            {
+                addObject = false;
+                spawnSpeed = 0;
+                break;
+            }
+        }
     }
-    count++;
-    }
-    }
+
     /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
+     * Prepare the world for the start of the program. That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
-     
     }
 }
