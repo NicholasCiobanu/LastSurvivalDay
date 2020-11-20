@@ -12,6 +12,7 @@ public class Character extends Actor
     private GreenfootImage image1 = null; //initialising base image
     private GreenfootImage image2 = null;//initialising second image 
     
+    
     /**
      * stores the image for the character and the character while he is shooting in variables
      */
@@ -19,6 +20,7 @@ public class Character extends Actor
     {
         image1 =  new  GreenfootImage("main.png");
         image2 =  new  GreenfootImage("shooting.png");
+        
         setImage(image1);
     }
 
@@ -72,13 +74,23 @@ public class Character extends Actor
            button = mouse.getButton();   
             if(button == 1 && Greenfoot.mouseClicked(null))  
             { 
-        
-            setImage(image2);
+                
+             shootBullet();
+             setImage(image2);
+            
         }
         else {
             setImage(image1);
         }
     }
 }
+public void shootBullet(){
+getWorld().addObject(new Bullet(getRotation()), getX(), getY());
+
+}
+
+
+
+
 }
 

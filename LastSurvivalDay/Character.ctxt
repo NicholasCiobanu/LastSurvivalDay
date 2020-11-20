@@ -16,4 +16,6 @@ comment4.text=\r\n\ controls\ the\ speed\ and\ the\ movement\ of\ the\ main\ cha
 comment5.params=
 comment5.target=void\ switchImage()
 comment5.text=\r\n\ switches\ to\ shooting\ image\ when\ left\ click\ is\ pressed\r\n
-numComments=6
+comment6.params=
+comment6.target=void\ shootBullet()
+numComments=7

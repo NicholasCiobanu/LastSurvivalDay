@@ -30,27 +30,19 @@ public class MyWorld extends World
     public void act()
     {
         int count = 0;
-        boolean addObject = true;
-        while (count < 20) {
-            if (addObject = true && Greenfoot.getRandomNumber(200) == 1) {
-                addObject( new Zombies(main), Greenfoot.getRandomNumber(1000), 400);
-                count++;
-                
-            }
+        
+        if(Greenfoot.getRandomNumber(100)<5&&count<20){
+            
+            addObject(new Zombies(main), 300,300);
             count++;
-            if (count == 20)
-            {
-                addObject = false;
-                spawnSpeed = 0;
-                break;
-            }
-        }
+            
     }
-
-    /**
+       
+    }
+     /**
      * Prepare the world for the start of the program. That is: create the initial objects and add them to the world.
      */
     private void prepare()
-    {
+       {
     }
 }

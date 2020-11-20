@@ -10,6 +10,4 @@ comment3.params=
 comment3.target=void\ switchImage()
 comment4.params=
 comment4.target=void\ moveAround()
-comment5.params=
-comment5.target=void\ spawn()
-numComments=6
+numComments=5
