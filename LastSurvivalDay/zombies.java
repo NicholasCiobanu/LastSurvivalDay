@@ -10,6 +10,7 @@ public class Zombies extends Actor
 {
     int switchImage = 0;
     int count;
+    int health = 3;
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
@@ -23,13 +24,28 @@ public class Zombies extends Actor
         image1 = new GreenfootImage("zombie.png");
         image2 =  new  GreenfootImage("zombie2.png");
         setImage(image1);
-        setRotation(180);
+        //setRotation(180);
     }
     public void act() 
     {
        switchImage();
        moveAround();
+       checkCollision();
     }    
+    private void checkCollision()
+    {
+        Actor a = getOneIntersectingObject(Bullet.class);
+        if(a != null){
+            MyWorld forest = (MyWorld) getWorld();
+            forest.removeObject(a);
+            health--;
+        }
+        if(health == 0)
+        {
+            getWorld().removeObject(this);
+        }
+    }
+    
     public void switchImage()
     {   
         if(Greenfoot.getRandomNumber(10)== 1)
@@ -48,5 +64,5 @@ public class Zombies extends Actor
     {
         move(Greenfoot.getRandomNumber(5));
         turnTowards(player.getX(), player.getY());
-    }
+    }  
 }

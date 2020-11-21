@@ -10,6 +10,7 @@ public class MyWorld extends World
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
+    int count = 0;
     public Character main =  new  Character();
 
     /**
@@ -29,15 +30,16 @@ public class MyWorld extends World
      */
     public void act()
     {
-        int count = 0;
-        
-        if(Greenfoot.getRandomNumber(100)<5&&count<20){
+        spawns();
+    }
+    public void spawns()
+    {
+           if(Greenfoot.getRandomNumber(100)<5&&count<20){
             
-            addObject(new Zombies(main), 300,300);
+            addObject(new Zombies(main), 1000,Greenfoot.getRandomNumber(600));
             count++;
             
     }
-       
     }
      /**
      * Prepare the world for the start of the program. That is: create the initial objects and add them to the world.

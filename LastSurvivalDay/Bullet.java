@@ -21,6 +21,7 @@ public class Bullet extends Actor
             getWorld().removeObject(this);
         }
     }    
+  
     public Bullet(int rotation){
         setRotation(rotation);
         speed = 15;
