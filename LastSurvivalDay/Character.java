@@ -79,18 +79,20 @@ public class Character extends Actor
              setImage(image2);
             
         }
-        else {
+            else {
             setImage(image1);
         }
     }
-}
-public void shootBullet(){
-getWorld().addObject(new Bullet(getRotation()), getX(), getY());
+    }
+    public void shootBullet(){
+        getWorld().addObject(new Bullet(getRotation()), getX(), getY());
 
-}
+    }
 
-
-
-
+    
+    
+    
+    
+    
 }
 
