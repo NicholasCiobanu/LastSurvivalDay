@@ -10,10 +10,11 @@ public class MiniBoss extends Actor
 {
     int switchImage = 0;
     int count;
-    int health = 3;
+    int MBhealth = 30;
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
+    MyWorld LastSurvivalDay;
     /**
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -30,8 +31,23 @@ public class MiniBoss extends Actor
     {
        switchImage();
        moveAround();
+       checkCollision();
     }    
-    
+     private void checkCollision()
+   {
+        Actor a = getOneIntersectingObject(Bullet.class);
+        if(a != null){
+            MyWorld forest = (MyWorld) getWorld();
+            forest.removeObject(a);
+            MBhealth--;
+        }
+        
+        if(MBhealth == 0)
+        {
+            LastSurvivalDay.score++;
+            getWorld().removeObject(this);
+        }
+    }
     public void switchImage()
     {   
         if(Greenfoot.getRandomNumber(10)== 1)

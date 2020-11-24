@@ -10,21 +10,26 @@ public class Zombies extends Actor
 {
     int switchImage = 0;
     int count;
-    int health = 3;
+    private int health = 3;
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
+    MyWorld LastSurvivalDay;
     /**
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Zombies()
+    {
+        
+    }
     public Zombies(Character main)
     {
         player = main;
         image1 = new GreenfootImage("zombie.png");
         image2 =  new  GreenfootImage("zombie2.png");
         setImage(image1);
-        //setRotation(180);
+        
     }
     public void act() 
     {
@@ -32,6 +37,7 @@ public class Zombies extends Actor
        moveAround();
        checkCollision();
     }    
+ 
     private void checkCollision()
     {
         Actor a = getOneIntersectingObject(Bullet.class);
@@ -40,8 +46,10 @@ public class Zombies extends Actor
             forest.removeObject(a);
             health--;
         }
+        
         if(health == 0)
         {
+            LastSurvivalDay.score++;
             getWorld().removeObject(this);
         }
     }
@@ -62,7 +70,7 @@ public class Zombies extends Actor
     }
     public void moveAround()
     {
-        move(Greenfoot.getRandomNumber(5));
+        move(Greenfoot.getRandomNumber(3));
         turnTowards(player.getX(), player.getY());
     }  
 }

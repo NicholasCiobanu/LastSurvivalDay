@@ -32,8 +32,23 @@ public class Character extends Actor
         faceMouse();
         move();
         switchImage();
+        hitEnemy();
+        hitMiniBoss();
     }
-
+    public void hitEnemy()
+    {
+        if (isTouching(Zombies.class)) {
+            getWorld().removeObject(this);
+            Greenfoot.stop();
+        }
+    }
+    public void hitMiniBoss()
+    {
+        if (isTouching(MiniBoss.class)) {
+            getWorld().removeObject(this);
+            Greenfoot.stop();
+        }
+    }
     /**
      * This method makes the actor always face the direction of where the mouse is pointing.
      */

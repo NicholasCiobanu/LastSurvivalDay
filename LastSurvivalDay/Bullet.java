@@ -13,6 +13,7 @@ public class Bullet extends Actor
     private GreenfootImage shotgun = null;//initialising second image
     private boolean isRifle=false;
     private boolean isShotgun=false;
+    
     /**
      * Act - do whatever the bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -58,4 +59,5 @@ public class Bullet extends Actor
     setImage(shotgun);
     }
     }
+    
 }
