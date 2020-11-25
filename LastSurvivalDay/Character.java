@@ -9,19 +9,21 @@ public class Character extends Actor
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
     
     private int speed = 3;//base speed of character
-    private GreenfootImage image1 = null; //initialising base image
-    private GreenfootImage image2 = null;//initialising second image 
-    
-    
+    private GreenfootImage rifle = null; //initialising base image
+    private GreenfootImage rifleShooting = null;//initialising second image 
+    private GreenfootImage shotgun = null;
+    private GreenfootImage shotgunShooting = null;
+    private int checkWeapon;
     /**
      * stores the image for the character and the character while he is shooting in variables
      */
     public Character()
     {
-        image1 =  new  GreenfootImage("main.png");
-        image2 =  new  GreenfootImage("shooting.png");
+        rifle =  new  GreenfootImage("main.png");
+        rifleShooting =  new  GreenfootImage("shooting.png");
+        shotgun =  new  GreenfootImage("Shotgun.png");
+        shotgunShooting = new GreenfootImage("ShotgunShooting.png");
         
-        setImage(image1);
     }
 
     /**
@@ -32,23 +34,11 @@ public class Character extends Actor
         faceMouse();
         move();
         switchImage();
-        hitEnemy();
-        hitMiniBoss();
+        checkGun();
+        showGun();
+        
     }
-    public void hitEnemy()
-    {
-        if (isTouching(Zombies.class)) {
-            getWorld().removeObject(this);
-            Greenfoot.stop();
-        }
-    }
-    public void hitMiniBoss()
-    {
-        if (isTouching(MiniBoss.class)) {
-            getWorld().removeObject(this);
-            Greenfoot.stop();
-        }
-    }
+
     /**
      * This method makes the actor always face the direction of where the mouse is pointing.
      */
@@ -90,24 +80,61 @@ public class Character extends Actor
             if(button == 1 && Greenfoot.mouseClicked(null))  
             { 
                 
-             shootBullet();
-             setImage(image2);
+             
+                if(checkWeapon%2==0){
+                    shootRifle();
+                    setImage(rifleShooting);
+           
+        
+                }
+                else {
+                    shootShotgun();
+                    setImage(shotgunShooting);
+                }
+        }
+            else {if(checkWeapon%2==0){
+                    setImage(rifle);
+                }
+                else {
+                    setImage(shotgun);
+                }
+        }
+    }
+    }
+    
+    public void shootRifle(){
+        getWorld().addObject(new Rifle(getRotation()), getX(), getY());
+
+    }
+    public void shootShotgun(){
+        getWorld().addObject(new Shotgun(getRotation()), getX(), getY());
+        getWorld().addObject(new Shotgun(getRotation()+5), getX(), getY());
+        getWorld().addObject(new Shotgun(getRotation()-5), getX(), getY());
+    }
+    private int checkGun(){
+        String key = Greenfoot.getKey();
+        if("e".equals(key)){
             
+        checkWeapon++;
+        
+        
         }
-            else {
-            setImage(image1);
-        }
+        
+        return checkWeapon;
     }
+    private void showGun(){
+    if(checkWeapon%2==0){
+                    getWorld().showText("Rifle",70,50);
+                    
+           
+        
+                }
+                else getWorld().showText("Shotgun",70,50);
+                
+    
+    
+    
     }
-    public void shootBullet(){
-        getWorld().addObject(new Bullet(getRotation()), getX(), getY());
-
-    }
-
-    
-    
-    
-    
     
 }
 
