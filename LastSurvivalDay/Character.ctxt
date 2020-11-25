@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Character
-comment0.text=\r\n\ This\ is\ the\ main\ character.\ He\ can\ move\ with\ keys,\ shoot\ with\ the\ mouse\r\n\ and\ switch\ images\ when\ switching\ guns.\ It\ dies\ when\ it\ touches\ a\ \r\n\ zombie\ or\ a\ boss.\ \r\n\ @author\ Nicholas\ Ciobanu)\r\n\ @version\ (11/25/20)\r\n\ \r\n
+comment0.text=\r\n\ This\ is\ the\ main\ character.\ He\ can\ move\ with\ keys,\ shoot\ with\ the\ mouse\r\n\ and\ switch\ images\ when\ switching\ guns.\ It\ dies\ when\ it\ touches\ a\ \r\n\ zombie\ or\ a\ boss.\ \r\n\ @author\ Nicholas\ Ciobanu)\r\n\ @version\ 11/25/20\r\n\ \r\n
 comment1.params=
 comment1.target=Character()
 comment1.text=\r\n\ stores\ the\ image\ for\ the\ character\ and\ the\ character\ while\ he\ is\ shooting\ in\ variables\r\n
