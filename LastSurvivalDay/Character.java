@@ -36,7 +36,8 @@ public class Character extends Actor
         switchImage();
         checkGun();
         showGun();
-        
+        hitZombies();
+        hitMiniBoss();
     }
 
     /**
@@ -49,7 +50,21 @@ public class Character extends Actor
             turnTowards(mouse.getX(), mouse.getY());
         }
     }
-
+    
+    public void hitZombies()
+    {
+        if(isTouching(Zombies.class)){
+            Greenfoot.stop();
+            //getWorld().removeObject(this);    
+        }
+    }
+    public void hitMiniBoss()
+    {
+        if(isTouching(MiniBoss.class)){
+            Greenfoot.stop();
+            //getWorld().removeObject(this);    
+        }
+    }
     /**
      * controls the speed and the movement of the main character with the "w,a,s,d" keys
      */

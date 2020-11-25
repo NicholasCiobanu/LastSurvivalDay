@@ -14,6 +14,7 @@ public class Zombies extends Actor
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
+    MyWorld LastSurvivalDay;
     /**
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -35,6 +36,7 @@ public class Zombies extends Actor
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
         Actor shotgun =getOneIntersectingObject(Shotgun.class);
+        Actor c = getOneIntersectingObject(Character.class);
         if(rifle != null){
             MyWorld forest = (MyWorld) getWorld();
             forest.removeObject(rifle);
@@ -45,8 +47,10 @@ public class Zombies extends Actor
             forest.removeObject(shotgun);
             health--;
         }
+      
         if(health == 0)
         {
+            LastSurvivalDay.score++;
             getWorld().removeObject(this);
         }
     }
