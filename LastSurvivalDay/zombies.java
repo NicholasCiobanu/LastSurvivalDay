@@ -24,7 +24,6 @@ public class Zombies extends Actor
         image1 = new GreenfootImage("zombie.png");
         image2 =  new  GreenfootImage("zombie2.png");
         setImage(image1);
-        //setRotation(180);
     }
     public void act() 
     {
