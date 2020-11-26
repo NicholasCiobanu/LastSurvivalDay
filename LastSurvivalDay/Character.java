@@ -2,7 +2,12 @@ import lang.stride.*;
 import greenfoot.*;
 
 /**
- * Write a description of class Main here. @author (your name) @version (a version number or a date)
+ * This is the main character. He can move with keys, shoot with the mouse
+ * and switch images when switching guns. It dies when it touches a 
+ * zombie or a boss. 
+ * @author Nicholas Ciobanu)
+ * @version 11/25/20
+ * 
  */
 public class Character extends Actor
 {
@@ -84,7 +89,8 @@ public class Character extends Actor
     }
 
     /**
-     * switches to shooting image when left click is pressed
+     * switches to shooting image when left click is pressed and calls the shoot
+     * methods
      */
     private void switchImage()
     {
@@ -117,15 +123,26 @@ public class Character extends Actor
     }
     }
     
+    /**
+     * Spwans a rifle bullet that goes in the direction where the mouse is pointing 
+     * at the time
+     */
     public void shootRifle(){
         getWorld().addObject(new Rifle(getRotation()), getX(), getY());
 
     }
+    /**
+     * Spwans 3 shotgun bullets that go in the 3 different directions
+     */
     public void shootShotgun(){
         getWorld().addObject(new Shotgun(getRotation()), getX(), getY());
         getWorld().addObject(new Shotgun(getRotation()+5), getX(), getY());
         getWorld().addObject(new Shotgun(getRotation()-5), getX(), getY());
     }
+    /**
+     * Checks which gun is being used and returns an int accordingly. 
+     * Press e to change guns.
+     */
     private int checkGun(){
         String key = Greenfoot.getKey();
         if("e".equals(key)){
@@ -137,6 +154,9 @@ public class Character extends Actor
         
         return checkWeapon;
     }
+    /**
+     * Displays the gun currently being used in the top left corner
+     */
     private void showGun(){
     if(checkWeapon%2==0){
                     getWorld().showText("Rifle",70,50);
@@ -144,12 +164,7 @@ public class Character extends Actor
            
         
                 }
-                else getWorld().showText("Shotgun",70,50);
-                
-    
-    
-    
+                else getWorld().showText("Shotgun",70,50);       
     }
-    
 }
 
