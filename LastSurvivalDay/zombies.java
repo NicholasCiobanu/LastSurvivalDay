@@ -71,7 +71,7 @@ public class Zombies extends Actor
     }
     public void moveAround()
     {
-        move(Greenfoot.getRandomNumber(5));
+        move(Greenfoot.getRandomNumber(4));
         turnTowards(player.getX(), player.getY());
     }  
 }
