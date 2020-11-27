@@ -19,6 +19,8 @@ public class Character extends Actor
     private GreenfootImage shotgun = null;
     private GreenfootImage shotgunShooting = null;
     private int checkWeapon;
+    private int Munitions;
+    private int button;
     /**
      * stores the image for the character and the character while he is shooting in variables
      */
@@ -131,6 +133,12 @@ public class Character extends Actor
         getWorld().addObject(new Rifle(getRotation()), getX(), getY());
 
     }
+    public void Munitions(){
+        
+        if (button == 1 && Greenfoot.mouseClicked(null)){
+           Munitions--; 
+    }
+}
     /**
      * Spwans 3 shotgun bullets that go in the 3 different directions
      */
