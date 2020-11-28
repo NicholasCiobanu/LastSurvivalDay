@@ -1,11 +1,12 @@
-import lang.stride.*;
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
- * @author (your name) @version (a version number or a date)
+ * Write a description of class City here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class City extends World
 {
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
     public static int score = 0;
@@ -17,12 +18,12 @@ public class MyWorld extends World
     /**
      * Constructor for objects of class MyWorld.
      */
-    public MyWorld()
+    public City()
     {
         super(1000, 600, 1);
         /* Create a new world with 1000x600 cells with a cell size of 1x1 pixels.*/
         addObject(main, 325, 180);
-        showText("Level 1, Plain",70,10);
+        showText("Level 2, City",65,10);
         prepare();
         
     }
@@ -36,7 +37,7 @@ public class MyWorld extends World
         MiniBoss();
         showText("Kills: " + score, 35, 550);
         if (score == 30) {
-            City a = new City();
+            BaseOfOperation a = new BaseOfOperation();
             Greenfoot.setWorld(a);
             //we get 10 points from mini boss so 20+10=30 points.
     }

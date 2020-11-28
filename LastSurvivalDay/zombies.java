@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Zombies extends Actor
+public class zombies extends Actor
 {
     int switchImage = 0;
     int count;
@@ -19,7 +19,7 @@ public class Zombies extends Actor
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Zombies(Character main)
+    public zombies(Character main)
     {
         player = main;
         image1 = new GreenfootImage("zombie.png");

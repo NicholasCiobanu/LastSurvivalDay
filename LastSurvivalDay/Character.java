@@ -60,7 +60,7 @@ public class Character extends Actor
     
     public void hitZombies()
     {
-        if(isTouching(Zombies.class)){
+        if(isTouching(zombies.class)){
             Greenfoot.stop();
             //getWorld().removeObject(this);    
         }
