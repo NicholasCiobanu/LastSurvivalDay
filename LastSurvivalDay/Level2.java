@@ -23,7 +23,7 @@ public class Level2 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 450, 1); 
         
-        setPaintOrder(Character.class,Zombies2.class,Brute.class,Rifle.class,Shotgun.class,Car.class,Van.class,Smoke.class,Lamp.class);
+        setPaintOrder(Character.class,Zombies2.class,Brute.class,Rifle.class,Shotgun.class,Ammo2.class,Car.class,Van.class,Smoke.class,Lamp.class);
         prepare();
     }
 

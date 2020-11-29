@@ -50,7 +50,7 @@ public class MiniBoss extends Actor
             MBhealth--;
         }
       
-        if(MBhealth == 0)
+        if(MBhealth <= 0)
         {
             LastSurvivalDay.score++;
             getWorld().removeObject(this);

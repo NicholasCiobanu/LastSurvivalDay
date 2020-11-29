@@ -48,10 +48,17 @@ public class Zombies2 extends Actor
             health--;
         }
       
-        if(health == 0)
+        if(health <= 0)
         {
-            //Zombies.LastSurvivalDay.score++;
+            //LastSurvivalDay.score++;
+            if(Greenfoot.getRandomNumber(4)==1){
+                
+                getWorld().addObject(new Ammo2(),getX(),getY());
+            
+            
+            }
             getWorld().removeObject(this);
+            
         }
     }
     

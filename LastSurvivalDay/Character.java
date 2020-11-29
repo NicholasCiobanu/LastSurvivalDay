@@ -12,14 +12,16 @@ import greenfoot.*;
 public class Character extends Actor
 {
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
-    
+    public boolean shooting;
+    public int shootTime;
     private int speed = 3;//base speed of character
     private GreenfootImage rifle = null; //initialising base image
     private GreenfootImage rifleShooting = null;//initialising second image 
     private GreenfootImage shotgun = null;
     private GreenfootImage shotgunShooting = null;
     private int checkWeapon;
-    private int Munitions;
+    public static int rifleAmmo=50;
+    public static int shotgunAmmo=30;
     private int button;
     /**
      * stores the image for the character and the character while he is shooting in variables
@@ -41,12 +43,16 @@ public class Character extends Actor
         faceMouse();
         move();
         switchImage();
+        shootRifle();
+        shootShotgun();
         checkGun();
         showGun();
         hitEnnemies();
-        
         getPositionX();
         getPositionY();
+        shootTime++;
+        Munitions();
+        
         
     }
 
@@ -100,26 +106,8 @@ public class Character extends Actor
      */
     private void switchImage()
     {
-        int button = 0;
-        MouseInfo mouse =  Greenfoot.getMouseInfo(); 
-         if(mouse!=null){ 
-           button = mouse.getButton();   
-            if(button == 1 && Greenfoot.mouseClicked(null))  
-            { 
-                
-             
-                if(checkWeapon%2==0){
-                    shootRifle();
-                    setImage(rifleShooting);
-           
         
-                }
-                else {
-                    shootShotgun();
-                    setImage(shotgunShooting);
-                }
-        }
-            else {if(checkWeapon%2==0){
+            {if(checkWeapon%2==0){
                     setImage(rifle);
                 }
                 else {
@@ -127,30 +115,60 @@ public class Character extends Actor
                 }
         }
     }
-    }
+    
     
     /**
      * Spwans a rifle bullet that goes in the direction where the mouse is pointing 
      * at the time
      */
     public void shootRifle(){
-        getWorld().addObject(new Rifle(getRotation()), getX(), getY());
-
+        if(rifleAmmo!=0){
+        if(checkWeapon%2==0){
+        if(shooting && (Greenfoot.mouseDragEnded(null) || Greenfoot.mouseClicked(null))){
+            shooting=false;
+        
+         }
+        if (!shooting && Greenfoot.mousePressed(null)) shooting = true;
+        if(shootTime%7==0&&shooting==true) {
+            setImage(rifleShooting);
+            getWorld().addObject(new Rifle(getRotation()), getX(), getY());
+            rifleAmmo--;
+         }
+        
+        }
+    }
     }
     public void Munitions(){
-        
-        if (button == 1 && Greenfoot.mouseClicked(null)){
-           Munitions--; 
+        if(rifleAmmo<=0) rifleAmmo=0;
+        if(shotgunAmmo<=0) shotgunAmmo=0;
+        if (isTouching(Ammo.class)||isTouching(Ammo2.class)){
+           rifleAmmo=rifleAmmo+Greenfoot.getRandomNumber(10)+10;
+           shotgunAmmo=shotgunAmmo+Greenfoot.getRandomNumber(5)+5;
+        }
+    
     }
-}
     /**
      * Spwans 3 shotgun bullets that go in the 3 different directions
      */
     public void shootShotgun(){
-        getWorld().addObject(new Shotgun(getRotation()), getX(), getY());
-        getWorld().addObject(new Shotgun(getRotation()+5), getX(), getY());
-        getWorld().addObject(new Shotgun(getRotation()-5), getX(), getY());
+        if(shotgunAmmo!=0){
+        if(checkWeapon%2!=0){
+        int button = 0;
+        MouseInfo mouse =  Greenfoot.getMouseInfo(); 
+         if(mouse!=null){ 
+           button = mouse.getButton();   
+            if(button == 1 && Greenfoot.mouseClicked(null))  
+            { 
+                getWorld().addObject(new Shotgun(getRotation()), getX(), getY());
+                getWorld().addObject(new Shotgun(getRotation()+5), getX(), getY());
+                getWorld().addObject(new Shotgun(getRotation()-5), getX(), getY());
+                setImage(shotgunShooting);
+                shotgunAmmo--;
+                }
+        }
+        }
     }
+}
     /**
      * Checks which gun is being used and returns an int accordingly. 
      * Press e to change guns.
@@ -169,11 +187,15 @@ public class Character extends Actor
     private void showGun(){
         if(checkWeapon%2==0){
             getWorld().showText("Rifle",70,50);
-                    
+            getWorld().showText("Ammo: "+rifleAmmo,70,65);
+            
            
         
            }
-        else getWorld().showText("Shotgun",70,50);       
+        else {
+            getWorld().showText("Shotgun",70,50);   
+            getWorld().showText("Ammo: "+shotgunAmmo,70,65);
+        }
     }
     /**
      * Gets the position X of the player

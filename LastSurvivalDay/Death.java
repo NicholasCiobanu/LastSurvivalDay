@@ -21,5 +21,9 @@ public class Death extends World
         showText("YOU DIED", 300, 200);
         
     }
-    public void act(){Greenfoot.stop();}
+    public void act(){
+        Character.rifleAmmo=50;
+        Character.shotgunAmmo=50;
+        Greenfoot.stop();
+    }
 }

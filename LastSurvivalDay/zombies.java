@@ -48,10 +48,17 @@ public class Zombies extends Actor
             health--;
         }
       
-        if(health == 0)
+        if(health <= 0)
         {
             LastSurvivalDay.score++;
+            if(Greenfoot.getRandomNumber(4)==1){
+                
+                getWorld().addObject(new Ammo(),getX(),getY());
+            
+            
+            }
             getWorld().removeObject(this);
+            
         }
     }
     
