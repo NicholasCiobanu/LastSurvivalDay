@@ -48,16 +48,16 @@ public class City extends World
      if(Greenfoot.getRandomNumber(100)<5&&count<20){
        switch(location){
            case(1):
-           addObject(new zombies(main), Greenfoot.getRandomNumber(1000), 600);
+           addObject(new Zombies(main), Greenfoot.getRandomNumber(1000), 600);
            break;
            case(2):
-           addObject(new zombies(main), 1000, Greenfoot.getRandomNumber(600));
+           addObject(new Zombies(main), 1000, Greenfoot.getRandomNumber(600));
            break;
            case(3):
-           addObject(new zombies(main), Greenfoot.getRandomNumber(1000), 0);
+           addObject(new Zombies(main), Greenfoot.getRandomNumber(1000), 0);
            break;
            case(4):
-           addObject(new zombies(main), 0, Greenfoot.getRandomNumber(600));
+           addObject(new Zombies(main), 0, Greenfoot.getRandomNumber(600));
            break;
         }
         count++;

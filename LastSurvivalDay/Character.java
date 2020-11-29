@@ -43,8 +43,11 @@ public class Character extends Actor
         switchImage();
         checkGun();
         showGun();
-        hitZombies();
-        hitMiniBoss();
+        hitEnnemies();
+        
+        getPositionX();
+        getPositionY();
+        
     }
 
     /**
@@ -58,20 +61,21 @@ public class Character extends Actor
         }
     }
     
-    public void hitZombies()
+    public void hitEnnemies()
     {
-        if(isTouching(zombies.class)){
-            Greenfoot.stop();
-            //getWorld().removeObject(this);    
+        if(isTouching(Zombies.class)||isTouching(Zombies2.class)){
+            Greenfoot.setWorld(new Death());
         }
-    }
-    public void hitMiniBoss()
-    {
         if(isTouching(MiniBoss.class)){
-            Greenfoot.stop();
-            //getWorld().removeObject(this);    
+            Greenfoot.setWorld(new Death());
+              
+        }
+        if(isTouching(Brute.class)){
+            Greenfoot.setWorld(new Death());
+              
         }
     }
+    
     /**
      * controls the speed and the movement of the main character with the "w,a,s,d" keys
      */
@@ -154,25 +158,38 @@ public class Character extends Actor
     private int checkGun(){
         String key = Greenfoot.getKey();
         if("e".equals(key)){
-            
         checkWeapon++;
         
-        
         }
-        
         return checkWeapon;
     }
     /**
      * Displays the gun currently being used in the top left corner
      */
     private void showGun(){
-    if(checkWeapon%2==0){
-                    getWorld().showText("Rifle",70,50);
+        if(checkWeapon%2==0){
+            getWorld().showText("Rifle",70,50);
                     
            
         
-                }
-                else getWorld().showText("Shotgun",70,50);       
+           }
+        else getWorld().showText("Shotgun",70,50);       
+    }
+    /**
+     * Gets the position X of the player
+     */
+    public int getPositionX(){
+    
+        return getX();
+    
+    }
+    /**
+     * Gets the position Y of the player
+     */
+    public int getPositionY(){
+    
+        return getY();
+    
     }
 }
 

@@ -14,7 +14,7 @@ public class MiniBoss extends Actor
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
-    MyWorld LastSurvivalDay;
+    Level1 LastSurvivalDay;
     /**
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -32,6 +32,7 @@ public class MiniBoss extends Actor
        switchImage();
        moveAround();
        checkCollision();
+       checkEndLevel();
     }    
     private void checkCollision()
     {
@@ -39,12 +40,12 @@ public class MiniBoss extends Actor
         Actor shotgun =getOneIntersectingObject(Shotgun.class);
         Actor c = getOneIntersectingObject(Character.class);
         if(rifle != null){
-            MyWorld forest = (MyWorld) getWorld();
+            Level1 forest = (Level1) getWorld();
             forest.removeObject(rifle);
             MBhealth--;
         }
         if(shotgun != null){
-            MyWorld forest = (MyWorld) getWorld();
+            Level1 forest = (Level1) getWorld();
             forest.removeObject(shotgun);
             MBhealth--;
         }
@@ -73,5 +74,14 @@ public class MiniBoss extends Actor
     {
         move(Greenfoot.getRandomNumber(5));
         turnTowards(player.getX(), player.getY());
-    }  
+    } 
+    public void checkEndLevel(){
+        if(MBhealth==0){
+            Greenfoot.setWorld(new Transition1());
+            
+        
+        
+        }
+    
+    }
 }

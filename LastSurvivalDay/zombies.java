@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class zombies extends Actor
+public class Zombies extends Actor
 {
     int switchImage = 0;
     int count;
@@ -14,12 +14,12 @@ public class zombies extends Actor
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
-    MyWorld LastSurvivalDay;
+    Level1 LastSurvivalDay;
     /**
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public zombies(Character main)
+    public Zombies(Character main)
     {
         player = main;
         image1 = new GreenfootImage("zombie.png");
@@ -38,12 +38,12 @@ public class zombies extends Actor
         Actor shotgun =getOneIntersectingObject(Shotgun.class);
         Actor c = getOneIntersectingObject(Character.class);
         if(rifle != null){
-            MyWorld forest = (MyWorld) getWorld();
+            Level1 forest = (Level1) getWorld();
             forest.removeObject(rifle);
             health--;
         }
         if(shotgun != null){
-            MyWorld forest = (MyWorld) getWorld();
+            Level1 forest = (Level1) getWorld();
             forest.removeObject(shotgun);
             health--;
         }

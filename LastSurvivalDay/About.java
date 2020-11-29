@@ -32,7 +32,7 @@ public class About extends World
  public void act ()
 {
     if (Greenfoot.isKeyDown("space")) {
-            MyWorld m = new MyWorld();
+            Level1 m = new Level1();
             Greenfoot.setWorld(m);
         }
     if (Greenfoot.isKeyDown("backspace")) {

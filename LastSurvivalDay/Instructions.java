@@ -24,6 +24,7 @@ public class Instructions extends World
         showText("'D' to move right",87,115);
         showText("'Mouse cursor' to aim weapon towards cursor",222,135);
         showText("'Left click' to shoot weapon",138,155);
+        showText("Press 'E' to change weapons",150,175);
         showText("'Space' to start playing",118,195);
         showText("<- 'Backspace' to go back to menu",170,575);
     }
@@ -34,7 +35,7 @@ public class Instructions extends World
  public void act ()
 {
     if (Greenfoot.isKeyDown("space")) {
-            MyWorld m = new MyWorld();
+            Level1 m = new Level1();
             Greenfoot.setWorld(m);
         }
     if (Greenfoot.isKeyDown("backspace")) {

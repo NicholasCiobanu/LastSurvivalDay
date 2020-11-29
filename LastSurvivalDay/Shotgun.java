@@ -11,6 +11,7 @@ public class Shotgun extends Actor
     //initializing the speed and bullet image
     private int speed=25;
     private GreenfootImage shotgun = null; 
+    private int bulletTime;
     /**
      * Creates the bullet and gives it a direction received from the character
      */
@@ -26,7 +27,8 @@ public class Shotgun extends Actor
     public void act() 
     {
         move();
-        removeAtEdge();
+        removeConditions();
+        bulletTime++;
     }    
     /**
      * Sets the speed of the bullet
@@ -38,9 +40,10 @@ public class Shotgun extends Actor
     /**
      * Removes the bullet when it touches the edge of the screen
      */
-    public void removeAtEdge(){
-        if(isAtEdge()){
+    public void removeConditions(){
+        if(isAtEdge()||bulletTime==15){
             getWorld().removeObject(this);
         }
+        
     }
 }
