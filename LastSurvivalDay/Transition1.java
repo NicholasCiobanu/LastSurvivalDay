@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Transition1 here.
+ * Transition between level 1 and 2
  * 
  * @author Nicholas Ciobanu 
  * @version (a version number or a date)

@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Ammo2 here.
  * 
- * @author (your name) 
+ * @author Nicholas Ciobanu
  * @version (a version number or a date)
  */
 public class Ammo2 extends Actor

@@ -66,7 +66,9 @@ public class Character extends Actor
             turnTowards(mouse.getX(), mouse.getY());
         }
     }
-    
+    /**
+     * This method makes the actor die when it touches an ennemy
+     */
     public void hitEnnemies()
     {
         if(isTouching(Zombies.class)||isTouching(Zombies2.class)){
@@ -101,8 +103,7 @@ public class Character extends Actor
     }
 
     /**
-     * switches to shooting image when left click is pressed and calls the shoot
-     * methods
+     * Checks which weapon is equipped and changes image in consequence
      */
     private void switchImage()
     {
@@ -118,8 +119,7 @@ public class Character extends Actor
     
     
     /**
-     * Spwans a rifle bullet that goes in the direction where the mouse is pointing 
-     * at the time
+     * Shoots the gun when left click is pressed or hold down, changes image when shooting
      */
     public void shootRifle(){
         if(rifleAmmo!=0){
@@ -138,6 +138,9 @@ public class Character extends Actor
         }
     }
     }
+    /**
+     * Keeps track of the ammo and increases it when the character touches an ammo pack
+     */
     public void Munitions(){
         if(rifleAmmo<=0) rifleAmmo=0;
         if(shotgunAmmo<=0) shotgunAmmo=0;
@@ -148,7 +151,7 @@ public class Character extends Actor
     
     }
     /**
-     * Spwans 3 shotgun bullets that go in the 3 different directions
+     * Spwans 3 shotgun bullets that go in the 3 different directions, changes image of character when shooting
      */
     public void shootShotgun(){
         if(shotgunAmmo!=0){
@@ -182,7 +185,7 @@ public class Character extends Actor
         return checkWeapon;
     }
     /**
-     * Displays the gun currently being used in the top left corner
+     * Displays the gun currently being used and ammo in the top left corner
      */
     private void showGun(){
         if(checkWeapon%2==0){
