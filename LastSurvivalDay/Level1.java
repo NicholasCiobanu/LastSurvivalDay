@@ -53,7 +53,7 @@ public class Level1 extends World
                      case(4):
                      addObject(new Zombies(main), 0, Greenfoot.getRandomNumber(600));
                      break;
-        }
+        } 
         count++;
      }
     }

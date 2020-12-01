@@ -1,15 +1,12 @@
-import lang.stride.*;
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This is the main character. He can move with keys, shoot with the mouse
- * and switch images when switching guns. It dies when it touches a 
- * zombie or a boss. 
- * @author Nicholas Ciobanu)
- * @version 11/25/20
+ * Write a description of class FinalLevelCharacter here.
  * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Character extends Actor
+public class FinalLevelCharacter extends Actor
 {
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
     public boolean shooting;
@@ -26,7 +23,7 @@ public class Character extends Actor
     /**
      * stores the image for the character and the character while he is shooting in variables
      */
-    public Character()
+    public FinalLevelCharacter()
     {
         rifle =  new  GreenfootImage("main.png");
         rifleShooting =  new  GreenfootImage("shooting.png");
@@ -94,12 +91,12 @@ public class Character extends Actor
         if (Greenfoot.isKeyDown("d")) {
             setLocation(getX() + speed,getY());
         }
-        if (Greenfoot.isKeyDown("w")) {
-            setLocation(getX(),getY()- speed);
-        }
-        if (Greenfoot.isKeyDown("s")) {
-            setLocation(getX() ,getY()+ speed);
-        }
+        //if (Greenfoot.isKeyDown("w")) {
+         //   setLocation(getX(),getY()- speed);
+        //}
+        //if (Greenfoot.isKeyDown("s")) {
+        //    setLocation(getX() ,getY()+ speed);
+        //}
         
     }
 
@@ -218,4 +215,3 @@ public class Character extends Actor
     
     }
 }
-
