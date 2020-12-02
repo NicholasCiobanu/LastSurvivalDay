@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Brute here.
+ * Like a zombie but bigger and slower
  * 
- * @author (your name) 
+ * @author Alvin Algos 
  * @version (a version number or a date)
  */
 public class Brute extends Actor

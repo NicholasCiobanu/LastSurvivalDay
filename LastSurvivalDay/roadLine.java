@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class roadLine here.
+ * Part of decor for level 2
  * 
  * @author Nicholas Ciobanu 
  * @version (a version number or a date)

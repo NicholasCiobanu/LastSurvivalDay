@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=Ammo2
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ammo2\ here.\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Ammo\ class\ for\ 2nd\ level\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Ammo2\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment1.text=\r\n\ Removes\ itself\ when\ it\ touches\ the\ character\ or\ reaches\ end\ of\ screen\ to\ the\ left\r\n\ Moves\ left\ to\ simulate\ side\ scrolling\ effect\r\n
+comment2.params=
+comment2.target=void\ location()
+numComments=3

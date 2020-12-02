@@ -2,8 +2,8 @@ import lang.stride.*;
 import greenfoot.*;
 
 /**
- * Write a description of class MyWorld here.
- * @author (your name) @version (a version number or a date)
+ * This is the first level
+ * @author Alvin Algos
  */
 public class Level1 extends World
 {
@@ -36,6 +36,7 @@ public class Level1 extends World
         MiniBoss();
         showText("Kills: " + score, 35, 550);
     }
+    //spawns the zombies
     public void spawns()
     {
              int location = 1+ Greenfoot.getRandomNumber(4);
@@ -57,6 +58,7 @@ public class Level1 extends World
         count++;
      }
     }
+    //spawns the mini boss
      public void MiniBoss()
     {
         while (score==20)

@@ -10,7 +10,7 @@ public class Transition1 extends World
 {
 
     /**
-     * Constructor for objects of class Transition1.
+     * Creates message for user
      * 
      */
     public Transition1()
@@ -29,6 +29,7 @@ public class Transition1 extends World
         
         
     }
+    //moves to level 2 after the user presses space
     public void checkSpace(){
         
         if (Greenfoot.isKeyDown("space")) {

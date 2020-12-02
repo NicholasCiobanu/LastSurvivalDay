@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level2 here.
+ * This is the second level which is a side scroller type
  * 
  * @author Nicholas Ciobanu
  * @version (a version number or a date)
@@ -33,7 +33,7 @@ public class Level2 extends World
         regularInterval++;
         resetCharPos();
     }
-
+    //spawns the scrolling elements of the decor
     public void spawnScrolling(){
         if (Greenfoot.getRandomNumber(400) < 1) {
             addObject( new  Cloud1(), 1000, Greenfoot.getRandomNumber(100));
@@ -58,7 +58,7 @@ public class Level2 extends World
             addObject( new  Smoke(), 1000,y-37);
         }
     }
-
+    //spawns the zombies
     public void spawnZombies(){
         if(Greenfoot.getRandomNumber(50)<1){
             addObject( new  Zombies2( main), 1000, Greenfoot.getRandomNumber(200)+200);
@@ -70,7 +70,7 @@ public class Level2 extends World
             addObject( new  Brute( main),1000, Greenfoot.getRandomNumber(200)+200);
         }
     }
-
+    //blocks the character from going too far up (needs to stay on ground)
     public void resetCharPos(){
 
         if(main.getPositionY()<200){
