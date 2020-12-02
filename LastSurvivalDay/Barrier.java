@@ -8,11 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Barrier extends Actor
 {
+    int health = 5;
+    FinalLevel LastSurvivalDay;
     public Barrier()
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()*3;
-        int myNewWidth = (int)myImage.getWidth()*3;
+        int myNewHeight = (int)myImage.getHeight()*4;
+        int myNewWidth = (int)myImage.getWidth()*7;
         myImage.scale(myNewWidth, myNewHeight);
     }
     /**
@@ -21,6 +23,27 @@ public class Barrier extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        setLocation();
+        checkCollision();
     }    
+    private void checkCollision()
+    {
+        Actor z = getOneIntersectingObject(ZombiesFinal.class);
+        
+        if(z != null){
+            FinalLevel base = (FinalLevel) getWorld();
+            base.removeObject(z);
+            health--;
+        }
+        if(health <= 0)
+        {
+            LastSurvivalDay.score++;
+            getWorld().removeObject(this);
+            Greenfoot.setWorld(new Death());
+        }
+    }
+    public void setLocation()
+    {
+        setLocation(getX(), getY());
+    }
 }

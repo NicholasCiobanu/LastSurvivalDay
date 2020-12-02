@@ -13,15 +13,15 @@ public class ZombiesFinal extends Actor
     int health = 3;
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
-    FinalLevelCharacter player;
+    Barrier wire;
     FinalLevel LastSurvivalDay;
     /**
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public ZombiesFinal(FinalLevelCharacter main)
+    public ZombiesFinal(Barrier main)
     {
-        player = main;
+        wire = main;
         image1 = new GreenfootImage("zombie.png");
         image2 =  new  GreenfootImage("zombie2.png");
         setImage(image1);
@@ -51,12 +51,6 @@ public class ZombiesFinal extends Actor
         if(health <= 0)
         {
             LastSurvivalDay.score++;
-            if(Greenfoot.getRandomNumber(4)==1){
-                
-                getWorld().addObject(new Ammo(),getX(),getY());
-            
-            
-            }
             getWorld().removeObject(this);
             
         }
@@ -79,6 +73,6 @@ public class ZombiesFinal extends Actor
     public void moveAround()
     {
         move(Greenfoot.getRandomNumber(4));
-        turnTowards(player.getX(), player.getY());
+        turnTowards(610, 605);
     }  
 }

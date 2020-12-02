@@ -12,7 +12,8 @@ public class FinalLevel extends World
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
     int count = 0;
-    public FinalLevelCharacter main = new FinalLevelCharacter();
+    public Barrier main2 = new Barrier();
+    public Character main =  new  Character();
     /**
      * Constructor for objects of class FinalLevel.
      * 
@@ -37,16 +38,16 @@ public class FinalLevel extends World
              if(Greenfoot.getRandomNumber(100)<3&&count<50){
                  switch(location){
                      case(1):
-                     addObject(new ZombiesFinal(main), 1000, 0);
+                     addObject(new ZombiesFinal(main2), 1000, 0);
                      break;
                      case(2):
-                     addObject(new ZombiesFinal(main), 0, 0);
+                     addObject(new ZombiesFinal(main2), 0, 0);
                      break;
                      case(3):
-                     addObject(new ZombiesFinal(main), Greenfoot.getRandomNumber(1000), 0);
+                     addObject(new ZombiesFinal(main2), Greenfoot.getRandomNumber(1000), 0);
                      break;
                      case(4):
-                     addObject(new ZombiesFinal(main), 640, 0);
+                     addObject(new ZombiesFinal(main2), 640, 0);
                      break;
         } 
         count++;
@@ -56,6 +57,8 @@ public class FinalLevel extends World
     private void prepare()
     {
         score = 0;
+        addObject(new Barrier(), 610, 605);
+        
     }
    
 }
