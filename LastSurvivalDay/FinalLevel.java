@@ -13,7 +13,7 @@ public class FinalLevel extends World
     protected int speedRate = 0;
     int count = 0;
     public Barrier main2 = new Barrier();
-    public Character main =  new  Character();
+    public FinalLevelCharacter main =  new  FinalLevelCharacter();
     /**
      * Constructor for objects of class FinalLevel.
      * 
@@ -50,7 +50,7 @@ public class FinalLevel extends World
                      addObject(new ZombiesFinal(main2), 640, 0);
                      break;
         } 
-        count++;
+          count++;
      }
     }
     
@@ -58,7 +58,8 @@ public class FinalLevel extends World
     {
         score = 0;
         addObject(new Barrier(), 610, 605);
-        
+        addObject(new AmmoCrate(), 1000, 620);
+        addObject(new AmmoCrate(), 250, 620);
     }
    
 }

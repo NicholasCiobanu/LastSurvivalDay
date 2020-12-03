@@ -18,7 +18,7 @@ public class FinalLevelCharacter extends Actor
     private GreenfootImage shotgunShooting = null;
     private int checkWeapon;
     public static int rifleAmmo=50;
-    public static int shotgunAmmo=30;
+    public static int shotgunAmmo=20;
     private int button;
     /**
      * stores the image for the character and the character while he is shooting in variables
@@ -142,11 +142,13 @@ public class FinalLevelCharacter extends Actor
     public void Munitions(){
         if(rifleAmmo<=0) rifleAmmo=0;
         if(shotgunAmmo<=0) shotgunAmmo=0;
-        if (isTouching(Ammo.class)||isTouching(Ammo2.class)){
-           rifleAmmo=rifleAmmo+Greenfoot.getRandomNumber(10)+10;
-           shotgunAmmo=shotgunAmmo+Greenfoot.getRandomNumber(5)+5;
+        if (isTouching(AmmoCrate.class)){
+            if(Greenfoot.isKeyDown("f")){
+           rifleAmmo=50;
+           shotgunAmmo=20;
         }
     
+    }
     }
     /**
      * Spwans 3 shotgun bullets that go in the 3 different directions, changes image of character when shooting
