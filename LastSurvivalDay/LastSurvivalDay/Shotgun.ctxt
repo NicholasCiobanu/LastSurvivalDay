@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Shotgun
+comment0.text=\r\n\ This\ is\ the\ shotgun\ bullet\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\r\n\ @version\ 11/25/20\r\n
+comment1.params=rotation
+comment1.target=Shotgun(int)
+comment1.text=\r\n\ Creates\ the\ bullet\ and\ gives\ it\ a\ direction\ received\ from\ the\ character\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Shotgun\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ move()
+comment3.text=\r\n\ Sets\ the\ speed\ of\ the\ bullet\r\n
+comment4.params=
+comment4.target=void\ removeConditions()
+comment4.text=\r\n\ Removes\ the\ bullet\ when\ it\ touches\ the\ edge\ of\ the\ screen\r\n
+numComments=5

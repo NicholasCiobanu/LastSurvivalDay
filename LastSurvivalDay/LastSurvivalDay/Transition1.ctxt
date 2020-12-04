@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Transition1
+comment0.text=\n\ Transition\ between\ level\ 1\ and\ 2\n\ \n\ @author\ Nicholas\ Ciobanu\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Transition1()
+comment1.text=\n\ Creates\ message\ for\ user\n\ \n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkSpace()
+numComments=4
