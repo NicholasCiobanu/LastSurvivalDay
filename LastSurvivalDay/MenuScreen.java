@@ -21,6 +21,7 @@ public class MenuScreen extends World
         showText("PRESS 'I' FOR INSTRUCTIONS",500,300);
         showText("PRESS 'A' FOR ABOUT US",500,350);
         showText("PRESS 'SPACEBAR' TO PLAY",500,450);
+        showText("Game Programming 1    Fall 2020   Teacher: Tassia Araujo",500,550);
 }
 /**
  * 

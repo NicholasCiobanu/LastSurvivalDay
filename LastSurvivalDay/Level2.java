@@ -13,6 +13,7 @@ public class Level2 extends World
     protected int speedRate = 0;
     int regularInterval = 0;
     public Character main =  new  Character();
+    int time=4000;
 
     /**
      * Constructor for objects of class Level2.
@@ -22,6 +23,7 @@ public class Level2 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 450, 1); 
+        Greenfoot.setSpeed(50);
         
         setPaintOrder(Character.class,Zombies2.class,Brute.class,Rifle.class,Shotgun.class,Ammo2.class,Car.class,Van.class,Smoke.class,Lamp.class);
         prepare();
@@ -32,6 +34,7 @@ public class Level2 extends World
         spawnZombies();
         regularInterval++;
         resetCharPos();
+        endLevel();
     }
     //spawns the scrolling elements of the decor
     public void spawnScrolling(){
@@ -109,6 +112,15 @@ public class Level2 extends World
             addObject (new roadLine(),i*300+200,337);
             addObject (new Lamp(),i*300+100,150);
             i++;
+        }
+        
+    }
+    private void endLevel(){
+        time--;
+        if(time==0){
+            
+            Greenfoot.setWorld(new Transition2());
+            
         }
         
     }

@@ -17,13 +17,14 @@ public class About extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1); 
-        showText("Development team members:",140,30);
-        showText("Nicholas Ciobanu",140,55);
-        showText("Vlad Christian Dumitrescu",140,80);
-        showText("Alvin Alagos Eli",140,105);
-        showText("Yiu Kai Wong",140,130);
-        showText("'Space' to start playing",118,195);
-        showText("<- 'Backspace' to go back to menu",170,575);
+        showText("Development team members:",500,30);
+        showText("Nicholas Ciobanu: Level 1, Level 2, Main Character, Guns, Ammo, Brute",500,55);
+        showText("Vlad Christian Dumitrescu: Level 4",500,80);
+        showText("Alvin Alagos Eli: Level 1, Level 5, Zombies, Bosses",500,105);
+        showText("Yiu Kai Wong: Menu, Level 3",500,130);
+        showText("'Space' to start playing",500,195);
+        showText("<- 'Backspace' to go back to menu",140,575);
+        showText("Creative Commons Zero v1.0 Universal license",700,575);
     }
     /**
  * 
