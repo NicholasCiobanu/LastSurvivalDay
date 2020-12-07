@@ -71,7 +71,7 @@ public class Character extends Actor
      */
     public void hitEnnemies()
     {
-        if(isTouching(Zombies.class)||isTouching(Zombies2.class)){
+        if(isTouching(Zombies.class)||isTouching(Zombies2.class)||isTouching(Zombies4.class)){
             Greenfoot.setWorld(new Death());
         }
         if(isTouching(MiniBoss.class)){
@@ -82,6 +82,7 @@ public class Character extends Actor
             Greenfoot.setWorld(new Death());
               
         }
+        
     }
     
     /**

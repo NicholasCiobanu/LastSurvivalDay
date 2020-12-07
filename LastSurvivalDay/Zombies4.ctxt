@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=MiniBoss
-comment0.text=\n\ Write\ a\ description\ of\ class\ MiniBoss\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.target=Zombies4
+comment0.text=\n\ Write\ a\ description\ of\ class\ Zombies4\ here.\n\ \n\ @author\ Vlad\ Dumitrescu\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=main
-comment1.target=MiniBoss(Character)
+comment1.target=Zombies4(Character)
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Zombies\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ act()
@@ -12,6 +12,4 @@ comment4.params=
 comment4.target=void\ switchImage()
 comment5.params=
 comment5.target=void\ moveAround()
-comment6.params=
-comment6.target=void\ checkEndLevel()
-numComments=7
+numComments=6
