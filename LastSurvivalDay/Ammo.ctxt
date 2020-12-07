@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Ammo
-comment0.text=\r\n\ Ammo\ class\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Ammo\ class\n\ \n\ @author\ Nicholas\ Ciobanu\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ All\ this\ class\ does\ is\ remove\ itself\ once\ it\ touches\ the\ character\r\n
+comment1.text=\n\ All\ this\ class\ does\ is\ remove\ itself\ once\ it\ touches\ the\ character\n
 numComments=2

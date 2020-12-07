@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Ammo2
-comment0.text=\r\n\ Ammo\ class\ for\ 2nd\ level\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Ammo\ class\ for\ 2nd\ level\n\ \n\ @author\ Nicholas\ Ciobanu\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Removes\ itself\ when\ it\ touches\ the\ character\ or\ reaches\ end\ of\ screen\ to\ the\ left\r\n\ Moves\ left\ to\ simulate\ side\ scrolling\ effect\r\n
+comment1.text=\n\ Removes\ itself\ when\ it\ touches\ the\ character\ or\ reaches\ end\ of\ screen\ to\ the\ left\n\ Moves\ left\ to\ simulate\ side\ scrolling\ effect\n
 comment2.params=
 comment2.target=void\ location()
 numComments=3

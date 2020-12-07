@@ -41,7 +41,7 @@ public class Level4 extends World
     public void spawns()
     {
              int location = 1+ Greenfoot.getRandomNumber(4);
-             if(Greenfoot.getRandomNumber(100)<3&& count<20){
+             if(Greenfoot.getRandomNumber(100)<3&& count<30){
                  switch(location){
                      case(1):
                      addObject(new Zombies4(main), Greenfoot.getRandomNumber(1000), 600);
@@ -69,8 +69,8 @@ public class Level4 extends World
         score = 0;
     }
     private void endLevel(){
-        time--;
-        if(time==0){
+        
+        if(score == 30){
             
             Greenfoot.setWorld(new Transition3());
             
