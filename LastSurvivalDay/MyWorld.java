@@ -38,7 +38,7 @@ public class MyWorld extends World
         if (score == 30) {
             City a = new City();
             Greenfoot.setWorld(a);
-            //we get 10 points from mini boss so 20+10=30 points.
+           //we get 10 points from mini boss so 20+10=30 points.
     }
     }
     public void spawns()

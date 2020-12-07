@@ -11,6 +11,7 @@ public class FinalLevel extends World
     public static int score = 0;
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
+    int spawn = 0;
     int count = 0;
     public Barrier main2 = new Barrier();
     public FinalLevelCharacter main =  new  FinalLevelCharacter();
@@ -27,9 +28,10 @@ public class FinalLevel extends World
     }
     public void act()
     {
-        spawns();
-        //MiniBoss();
+        //spawns();
+        FinalBoss();
         showText("Kills: " + score, 35, 550);
+        spawn++;
     }
     
     public void spawns()
@@ -52,6 +54,14 @@ public class FinalLevel extends World
         } 
           count++;
      }
+    }
+    public void FinalBoss()
+    {
+        if(spawn == 1)
+        {
+        addObject(new FinalBoss(main2), 600, 100);
+        
+    }
     }
     
     private void prepare()

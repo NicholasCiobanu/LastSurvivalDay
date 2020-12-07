@@ -29,10 +29,15 @@ public class Barrier extends Actor
     private void checkCollision()
     {
         Actor z = getOneIntersectingObject(ZombiesFinal.class);
-        
+        Actor b = getOneIntersectingObject(Boulder.class);
         if(z != null){
             FinalLevel base = (FinalLevel) getWorld();
             base.removeObject(z);
+            health--;
+        }
+        if(b != null){
+            FinalLevel base = (FinalLevel) getWorld();
+            base.removeObject(b);
             health--;
         }
         if(health <= 0)
