@@ -14,7 +14,7 @@ public class Brute extends Actor
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
-    
+    Level2 LastSurvivalDay;
     /**
      * Act - do whatever the Brute wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -50,7 +50,7 @@ public class Brute extends Actor
       
         if(health <= 0)
         {
-            //LastSurvivalDay.score++;
+            LastSurvivalDay.score++;
             if(Greenfoot.getRandomNumber(3)==1){
                 
                 getWorld().addObject(new Ammo2(),getX(),getY());

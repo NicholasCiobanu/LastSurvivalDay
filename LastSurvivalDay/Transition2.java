@@ -8,16 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Transition2 extends World
 {
-
+    int score;
     /**
      * Constructor for objects of class Transition2.
      * 
      */
-    public Transition2()
+    public Transition2(int score)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 394, 1); 
-        
+        this.score=score;
+        showText("YOUR SCORE IS:"+score,350,350);
         showText("INSERT STORY HERE",350,100);
     }
     public void act(){
@@ -31,7 +31,7 @@ public class Transition2 extends World
     public void checkSpace(){
         
         if (Greenfoot.isKeyDown("space")) {
-            Greenfoot.setWorld(new BaseOfOperation());
+            Greenfoot.setWorld(new Level4(score));
         }
         
     }

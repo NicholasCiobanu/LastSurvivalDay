@@ -14,4 +14,6 @@ comment4.target=void\ MiniBoss()
 comment5.params=
 comment5.target=void\ prepare()
 comment5.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
-numComments=6
+comment6.params=
+comment6.target=void\ time()
+numComments=7

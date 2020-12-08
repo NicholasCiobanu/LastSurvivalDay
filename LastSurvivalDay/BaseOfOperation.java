@@ -68,7 +68,7 @@ public class BaseOfOperation extends World
     {
         while (score== 20)
         {
-            addObject(new MiniBoss(main), 500, 600);
+            addObject(new MiniBoss(main,score), 500, 600);
             score++;
             break;
         }

@@ -19,7 +19,7 @@ public class Level4 extends World
     /**
      * Constructor for objects of class MyWorld.
      */
-    public Level4()
+    public Level4(int score)
     {
         super(1000, 600, 1);
         /* Create a new world with 1000x600 cells with a cell size of 1x1 pixels.*/
@@ -72,7 +72,7 @@ public class Level4 extends World
         
         if(score == 30){
             
-            Greenfoot.setWorld(new Transition3());
+            Greenfoot.setWorld(new Transition3(score));
             
         }
         

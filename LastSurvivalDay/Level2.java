@@ -8,22 +8,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2 extends World
 {
-
+    static int score;
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
     int regularInterval = 0;
     public Character main =  new  Character();
-    int time=4000;
+    int time=300;
 
     /**
      * Constructor for objects of class Level2.
      * 
      */
-    public Level2()
+    public Level2(int score)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 450, 1); 
         Greenfoot.setSpeed(50);
+        this.score=score;
         
         setPaintOrder(Character.class,Zombies2.class,Brute.class,Rifle.class,Shotgun.class,Ammo2.class,Car.class,Van.class,Smoke.class,Lamp.class);
         prepare();
@@ -35,6 +36,8 @@ public class Level2 extends World
         regularInterval++;
         resetCharPos();
         endLevel();
+        showTime();
+        showText("Kills: " + score, 35, 420);
     }
     //spawns the scrolling elements of the decor
     public void spawnScrolling(){
@@ -119,11 +122,14 @@ public class Level2 extends World
         time--;
         if(time==0){
             
-            Greenfoot.setWorld(new Transition2());
+            Greenfoot.setWorld(new Transition2(score));
             
         }
         
     }
-    
+    private void showTime(){
+        showText("Distance left: "+time+" meters", 875, 15);
+        
+    }
     
 }

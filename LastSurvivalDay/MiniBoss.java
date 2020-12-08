@@ -11,6 +11,7 @@ public class MiniBoss extends Actor
     int switchImage = 0;
     int count;
     int MBhealth = 50;
+    int score;
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
@@ -19,9 +20,10 @@ public class MiniBoss extends Actor
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public MiniBoss(Character main)
+    public MiniBoss(Character main, int score)
     {
         player = main;
+        this.score=score;
         image1 = new GreenfootImage("Mini-boss.png");
         image2 =  new  GreenfootImage("Mini-boss2.png");
         setImage(image1);
@@ -77,7 +79,7 @@ public class MiniBoss extends Actor
     } 
     public void checkEndLevel(){
         if(MBhealth==0){
-            Greenfoot.setWorld(new Transition1());
+            Greenfoot.setWorld(new Transition1(score));
             
         
         

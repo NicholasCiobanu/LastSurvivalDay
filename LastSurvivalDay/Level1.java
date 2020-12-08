@@ -11,8 +11,8 @@ public class Level1 extends World
     public static int score = 0;
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
-    private int timer = 1000;
-    int count = 0;
+    private int timer = 300;
+    
     public Character main =  new  Character();
 
     /**
@@ -24,9 +24,9 @@ public class Level1 extends World
         /* Create a new world with 1000x600 cells with a cell size of 1x1 pixels.*/
         addObject(main, 325, 180);
         showText("Level 1, Forest",70,10);
-        showText("Timer: " + timer, 800, 10);
+        
         prepare();
-        timer--;
+        
     }
 
     /**
@@ -37,13 +37,14 @@ public class Level1 extends World
         spawns();
         MiniBoss();
         showText("Kills: " + score, 35, 550);
-        timer--;
+        time();
+        
     }
     //spawns the zombies
     public void spawns()
     {
              int location = 1+ Greenfoot.getRandomNumber(4);
-             if(Greenfoot.getRandomNumber(100)<3&&count<20){
+             if(Greenfoot.getRandomNumber(100)<3&&timer>0){
                  switch(location){
                      case(1):
                      addObject(new Zombies(main), Greenfoot.getRandomNumber(100), 600);
@@ -58,16 +59,15 @@ public class Level1 extends World
                      addObject(new Zombies(main), 0, Greenfoot.getRandomNumber(600));
                      break;
         } 
-        count++;
-        timer--;
+        
      }
     }
     //spawns the mini boss
      public void MiniBoss()
     {
-        while (timer==0)
+        while (timer==1)
         {
-            addObject(new MiniBoss(main), 500, 600);
+            addObject(new MiniBoss(main,score), 500, 600);
             score++;
             break;
         }
@@ -80,5 +80,12 @@ public class Level1 extends World
     private void prepare()
         {
         score = 0;
+    }
+    
+    private void time(){
+        if(timer>0){
+        showText("Timer: " + timer, 800, 10);
+        timer--;
+    }
     }
 }

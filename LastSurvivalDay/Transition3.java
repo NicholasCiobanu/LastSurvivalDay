@@ -13,7 +13,7 @@ public class Transition3 extends World
      * Constructor for objects of class Transition2.
      * 
      */
-    public Transition3()
+    public Transition3(int score)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 394, 1); 
@@ -21,6 +21,7 @@ public class Transition3 extends World
         showText("You got enough medical supplies and start leaving the hospital",350,150);
         showText("You find out there is a base at the edge of the city and you go there",350,200);
         showText("PRESS SPACE TO PROCEED TO NEXT LEVEL", 350, 250);
+        showText("YOUR SCORE IS:"+score,350,350);
     }
     public void act(){
         
