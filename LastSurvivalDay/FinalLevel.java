@@ -28,7 +28,7 @@ public class FinalLevel extends World
     }
     public void act()
     {
-        //spawns();
+        spawns();
         FinalBoss();
         showText("Kills: " + score, 35, 550);
         spawn++;
@@ -57,10 +57,13 @@ public class FinalLevel extends World
     }
     public void FinalBoss()
     {
-        if(spawn == 1)
+        if(score == 50)
         {
+        GreenfootSound sound = new GreenfootSound("Boss.mp3");
+        sound.setVolume(100);
+        sound.play();
         addObject(new FinalBoss(main2), 600, 100);
-        
+        score++;
     }
     }
     
@@ -70,6 +73,7 @@ public class FinalLevel extends World
         addObject(new Barrier(), 610, 605);
         addObject(new AmmoCrate(), 1000, 620);
         addObject(new AmmoCrate(), 250, 620);
+        addObject(new Button(), 400, 625);
     }
    
 }

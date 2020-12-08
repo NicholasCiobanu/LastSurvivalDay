@@ -12,6 +12,8 @@ public class FinalBoss extends Actor
     int health = 100;
     int count = 0;
     FinalLevel LastSurvivalDay;
+    private GreenfootImage image1=null;
+    private GreenfootImage image2=null;
     public Barrier main = new Barrier();
     /**
      * Act - do whatever the FinalBoss wants to do. This method is called whenever
@@ -21,10 +23,11 @@ public class FinalBoss extends Actor
     {
         wire = main;
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()*2;
-        int myNewWidth = (int)myImage.getWidth()*2;
+        int myNewHeight = (int)myImage.getHeight();
+        int myNewWidth = (int)myImage.getWidth();
         myImage.scale(myNewWidth, myNewHeight);
-        
+        image1 = new GreenfootImage("Final_Throw.png");
+        image2= new GreenfootImage("Final_Throw2.png");
     }
     public FinalBoss()
     {
@@ -44,6 +47,14 @@ public class FinalBoss extends Actor
         int launch = 1 + Greenfoot.getRandomNumber(100);
         if (launch == 1)
         {
+            if (getImage() == image1)
+        {
+            setImage(image2);
+        }
+        else
+        {
+            setImage(image1);
+        }
             getWorld().addObject(new Boulder(), getX(), getY());
         }
         
@@ -77,7 +88,12 @@ public class FinalBoss extends Actor
             base.removeObject(shotgun);
             health--;
         }
-      
+        if(health == 50)
+        {
+            GreenfootSound sound = new GreenfootSound("Rage.mp3");
+            sound.setVolume(100);
+            sound.play();
+        }
         if(health <= 0)
         {
             LastSurvivalDay.score++;

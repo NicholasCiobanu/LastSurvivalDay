@@ -36,7 +36,7 @@ public class ZombiesFinal extends Actor
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
         Actor shotgun =getOneIntersectingObject(Shotgun.class);
-        Actor c = getOneIntersectingObject(Character.class);
+        Actor d = getOneIntersectingObject(Dog.class);
         if(rifle != null){
             FinalLevel base = (FinalLevel) getWorld();
             base.removeObject(rifle);
@@ -47,10 +47,13 @@ public class ZombiesFinal extends Actor
             base.removeObject(shotgun);
             health--;
         }
-      
+        
         if(health <= 0)
         {
             LastSurvivalDay.score++;
+            GreenfootSound sound = new GreenfootSound("Grunt1.mp3");
+            sound.setVolume(20);
+            sound.play();
             getWorld().removeObject(this);
             
         }
@@ -68,7 +71,7 @@ public class ZombiesFinal extends Actor
         {
             setImage(image1);
         }
-    }
+     }
     }
     public void moveAround()
     {

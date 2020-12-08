@@ -57,6 +57,9 @@ public class Zombies4 extends Actor
             
             
             }
+            GreenfootSound sound = new GreenfootSound("Grunt1.mp3");
+            sound.setVolume(20);
+            sound.play();
             getWorld().removeObject(this);
             
         }

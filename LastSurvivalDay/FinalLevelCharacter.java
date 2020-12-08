@@ -20,6 +20,8 @@ public class FinalLevelCharacter extends Actor
     public static int rifleAmmo=50;
     public static int shotgunAmmo=20;
     private int button;
+    private int uses = 0;
+    FinalLevel LastSurvivalDay;
     /**
      * stores the image for the character and the character while he is shooting in variables
      */
@@ -49,6 +51,7 @@ public class FinalLevelCharacter extends Actor
         getPositionY();
         shootTime++;
         Munitions();
+        spawnDogs();
         
         
     }
@@ -91,12 +94,7 @@ public class FinalLevelCharacter extends Actor
         if (Greenfoot.isKeyDown("d")) {
             setLocation(getX() + speed,getY());
         }
-        //if (Greenfoot.isKeyDown("w")) {
-         //   setLocation(getX(),getY()- speed);
-        //}
-        //if (Greenfoot.isKeyDown("s")) {
-        //    setLocation(getX() ,getY()+ speed);
-        //}
+        
         
     }
 
@@ -149,6 +147,22 @@ public class FinalLevelCharacter extends Actor
         }
     
     }
+    }
+    public void spawnDogs()
+    {
+        
+        Actor butt = getOneIntersectingObject(Button.class);
+        if(isTouching(Button.class)){
+            if(Greenfoot.isKeyDown("f")){
+                getWorld().addObject(new Dog(),0, 350);
+                getWorld().addObject(new Dog(),1280, 350);
+                uses++;
+                if(uses == 1){
+                    FinalLevel base = (FinalLevel) getWorld();
+                    base.removeObject(butt);
+                }
+            }
+        }
     }
     /**
      * Spwans 3 shotgun bullets that go in the 3 different directions, changes image of character when shooting
