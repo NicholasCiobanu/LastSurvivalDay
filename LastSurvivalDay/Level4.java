@@ -13,7 +13,8 @@ public class Level4 extends World
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
     int count = 0;
-    int time = 30;
+    private int timer = 1500;
+    
     public Character main =  new  Character();
 
     /**
@@ -26,6 +27,7 @@ public class Level4 extends World
         addObject(main, 325, 180);
         showText("Level 4, Hospital",70,10);
         prepare();
+        this.score = score;
         
     }
 
@@ -36,15 +38,18 @@ public class Level4 extends World
     {
         spawns();
         showText("Kills: " + score, 35, 550);
+        MiniBoss4();
+        time();
+        
+        
     }
     //spawns the zombies
     public void spawns()
-    {
-             int location = 1+ Greenfoot.getRandomNumber(4);
-             if(Greenfoot.getRandomNumber(100)<3&& count<30){
+    {        int location = 1+ Greenfoot.getRandomNumber(4);
+             if(Greenfoot.getRandomNumber(100)<3 && count<25){
                  switch(location){
                      case(1):
-                     addObject(new Zombies4(main), Greenfoot.getRandomNumber(1000), 600);
+                     addObject(new Zombies4(main), Greenfoot.getRandomNumber(100), 600);
                      break;
                      case(2):
                      addObject(new Zombies4(main), 1000, Greenfoot.getRandomNumber(600));
@@ -58,6 +63,7 @@ public class Level4 extends World
         } 
         count++;
      }
+     
     }
     
     
@@ -68,13 +74,21 @@ public class Level4 extends World
         {
         score = 0;
     }
-    private void endLevel(){
-        
-        if(score == 30){
+    
+    private void time(){
+        if(timer>0){
+        showText("Timer: " + timer, 800, -10);
+        timer--;
+    }
+    }
+    public void MiniBoss4(){
+        while(timer==750){
             
-            Greenfoot.setWorld(new Transition3(score));
+           addObject(new MiniBoss4(main, score), 500, 400);
+           score++;
+           break;
             
         }
-        
     }
+    
 }

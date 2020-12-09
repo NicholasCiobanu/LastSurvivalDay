@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Transition3 extends World
 {
-
+    int score;
     /**
      * Constructor for objects of class Transition2.
      * 
@@ -17,6 +17,7 @@ public class Transition3 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 394, 1); 
+        this.score = score;
         showText("You fought off the zombies at the entrance of the hospital",350,100);
         showText("You got enough medical supplies and start leaving the hospital",350,150);
         showText("You find out there is a base at the edge of the city and you go there",350,200);
@@ -28,7 +29,7 @@ public class Transition3 extends World
         checkSpace();
         
         
-       
+      
     }
     //moves to level 3 after the user presses space
     public void checkSpace(){

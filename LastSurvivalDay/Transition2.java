@@ -18,7 +18,8 @@ public class Transition2 extends World
         super(600, 394, 1); 
         this.score=score;
         showText("YOUR SCORE IS:"+score,350,350);
-        showText("INSERT STORY HERE",350,100);
+        showText("You got off the road and killed the zombies in your way",350,100);
+        showText("You are now headed towards the hospital to get medical supplies", 350, 200);
     }
     public void act(){
         
