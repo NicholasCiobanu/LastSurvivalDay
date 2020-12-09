@@ -22,6 +22,7 @@ public class Transition3 extends World
         showText("You got enough medical supplies and start leaving the hospital",350,150);
         showText("You find out there is a base at the edge of the city and you go there",350,200);
         showText("PRESS SPACE TO PROCEED TO NEXT LEVEL", 350, 250);
+        showText("To interact with objects press F", 350, 300);
         showText("YOUR SCORE IS:"+score,350,350);
     }
     public void act(){
