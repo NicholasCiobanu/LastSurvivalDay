@@ -11,6 +11,7 @@ public class FinalBoss extends Actor
     Barrier wire;
     int health = 100;
     int count = 0;
+    int score;
     FinalLevel LastSurvivalDay;
     private GreenfootImage image1=null;
     private GreenfootImage image2=null;
@@ -22,24 +23,28 @@ public class FinalBoss extends Actor
     public FinalBoss(Barrier main)
     {
         wire = main;
+        image1 = new GreenfootImage("Final_Throw.png");
+        image2= new GreenfootImage("Final_Throw2.png");
         GreenfootImage myImage = getImage();
+        GreenfootImage myImage1 = image1;
         int myNewHeight = (int)myImage.getHeight();
         int myNewWidth = (int)myImage.getWidth();
         myImage.scale(myNewWidth, myNewHeight);
-        image1 = new GreenfootImage("Final_Throw.png");
-        image2= new GreenfootImage("Final_Throw2.png");
+        
     }
     public FinalBoss()
     {
         
     }
+   
     public void act() 
     {
+        HealthBar();
         attack();
         faceTo();
         checkCollision();
         spawns();
-   
+        
     }    
     
     public void attack()
@@ -75,7 +80,6 @@ public class FinalBoss extends Actor
     }
     public void checkCollision()
     {
-        getWorld().showText("Boss Health: " + health, 1200, 50);
         Actor rifle = getOneIntersectingObject(Rifle.class);
         Actor shotgun =getOneIntersectingObject(Shotgun.class);
         if(rifle != null){
@@ -98,7 +102,7 @@ public class FinalBoss extends Actor
         {
             LastSurvivalDay.score++;
             getWorld().removeObject(this);
-            Greenfoot.setWorld(new EndTransition());
+            Greenfoot.setWorld(new EndTransition(score));
         }
     }
     public void spawns()
@@ -124,5 +128,67 @@ public class FinalBoss extends Actor
            count++;
      }
         }
+    }
+    public void HealthBar()
+    {
+        Actor h100 = getOneIntersectingObject(Health100.class);
+        Actor h90 = getOneIntersectingObject(Health90.class);
+        Actor h80 = getOneIntersectingObject(Health80.class);
+        Actor h70 = getOneIntersectingObject(Health70.class);
+        Actor h60 = getOneIntersectingObject(Health60.class);
+        Actor h50 = getOneIntersectingObject(Health50.class);
+        Actor h40 = getOneIntersectingObject(Health40.class);
+        Actor h30 = getOneIntersectingObject(Health30.class);
+        Actor h20 = getOneIntersectingObject(Health20.class);
+        Actor h10 = getOneIntersectingObject(Health10.class);
+       if(health == 100)
+       {
+           getWorld().addObject(new Health100(), 640, 0);
+       }
+       if(health == 90){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h100);
+           getWorld().addObject(new Health90(), 640, 0); 
+       }
+       if(health == 80){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h90);
+           getWorld().addObject(new Health80(), 640, 0); 
+       }
+       if(health == 70){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h80);
+           getWorld().addObject(new Health70(), 640, 0); 
+       }
+       if(health == 60){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h70);
+           getWorld().addObject(new Health60(), 640, 0); 
+       }
+       if(health == 50){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h60);
+           getWorld().addObject(new Health50(), 640, 0); 
+       }
+       if(health == 40){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h50);
+           getWorld().addObject(new Health40(), 640, 0); 
+       }
+       if(health == 30){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h40);
+           getWorld().addObject(new Health30(), 640, 0); 
+       }
+       if(health == 20){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h30);
+           getWorld().addObject(new Health20(), 640, 0); 
+       }
+       if(health == 10){
+           FinalLevel base = (FinalLevel) getWorld();
+           base.removeObject(h20);
+           getWorld().addObject(new Health10(), 640, 0); 
+       }
     }
 }

@@ -11,7 +11,7 @@ public class Level1 extends World
     public static int score = 0;
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
-    private int timer = 300;
+    private int timer = 3800;
     
     public Character main =  new  Character();
 

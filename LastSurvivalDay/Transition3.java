@@ -16,7 +16,7 @@ public class Transition3 extends World
     public Transition3(int score)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 394, 1); 
+        super(700, 394, 1); 
         this.score = score;
         showText("You fought off the zombies at the entrance of the hospital",350,100);
         showText("You got enough medical supplies and start leaving the hospital",350,150);
@@ -35,7 +35,7 @@ public class Transition3 extends World
     public void checkSpace(){
         
         if (Greenfoot.isKeyDown("space")) {
-            Greenfoot.setWorld(new FinalLevel());
+            Greenfoot.setWorld(new FinalLevel(score));
         }
         
     }

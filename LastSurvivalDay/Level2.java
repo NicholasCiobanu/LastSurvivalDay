@@ -13,7 +13,7 @@ public class Level2 extends World
     protected int speedRate = 0;
     int regularInterval = 0;
     public Character main =  new  Character();
-    int time=300;
+    int time=4000;
 
     /**
      * Constructor for objects of class Level2.

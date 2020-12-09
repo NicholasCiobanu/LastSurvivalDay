@@ -17,14 +17,20 @@ public class Death extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        
         showText("YOU DIED", 300, 200);
+        showText("Press space to return to the main menu", 300, 250);
         
     }
     //resets the ammo for next play session
     public void act(){
         Character.rifleAmmo=50;
         Character.shotgunAmmo=50;
-        Greenfoot.stop();
+        checkKey();
+    }
+    public void checkKey()
+    {
+        if(Greenfoot.isKeyDown("space")){
+            Greenfoot.setWorld(new MenuScreen());
+        }
     }
 }

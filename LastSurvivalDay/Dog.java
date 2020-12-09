@@ -33,6 +33,7 @@ public class Dog extends Actor
         if(z != null){
             FinalLevel base = (FinalLevel) getWorld();
             GreenfootSound sound = new GreenfootSound("Bite.mp3");
+            LastSurvivalDay.score++;
             sound.setVolume(20);
             sound.play();
             base.removeObject(z);

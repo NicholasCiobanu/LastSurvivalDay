@@ -32,6 +32,7 @@ public class Barrier extends Actor
         Actor b = getOneIntersectingObject(Boulder.class);
         if(z != null){
             FinalLevel base = (FinalLevel) getWorld();
+            LastSurvivalDay.score++;
             base.removeObject(z);
             health--;
         }
