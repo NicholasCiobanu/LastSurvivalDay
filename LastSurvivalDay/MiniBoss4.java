@@ -39,7 +39,7 @@ public class MiniBoss4 extends Actor
     private void checkCollision()
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
-        Actor shotgun =getOneIntersectingObject(Shotgun.class);
+        Actor shotgun = getOneIntersectingObject(Shotgun.class);
         Actor c = getOneIntersectingObject(Character.class);
         if(rifle != null){
             Level4 Hospital = (Level4) getWorld();

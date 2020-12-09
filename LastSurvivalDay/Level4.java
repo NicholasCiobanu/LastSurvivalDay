@@ -40,6 +40,7 @@ public class Level4 extends World
         showText("Kills: " + score, 35, 550);
         MiniBoss4();
         time();
+        showText("Timer: " + timer, 800, 10);
         
         
     }
@@ -75,16 +76,17 @@ public class Level4 extends World
         score = 0;
     }
     
-    private void time(){
+    private void time()
+    {
         if(timer>0){
-        showText("Timer: " + timer, 800, -10);
+        showText("Timer: " + timer, 800, 10);
         timer--;
     }
     }
     public void MiniBoss4(){
         while(timer==750){
             
-           addObject(new MiniBoss4(main, score), 500, 400);
+           addObject(new MiniBoss4(main, score), 800, 600);
            score++;
            break;
             

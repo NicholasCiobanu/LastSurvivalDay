@@ -39,6 +39,7 @@ public class Level1 extends World
         showText("Kills: " + score, 35, 550);
         time();
         
+        
     }
     //spawns the zombies
     public void spawns()
