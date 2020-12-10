@@ -12,7 +12,7 @@ public class FinalLevel extends World
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
     int count = 0;
-    int timer = 4500;
+    int timer = 4000;
     public Barrier main2 = new Barrier();
     public FinalLevelCharacter main =  new  FinalLevelCharacter();
     /**
@@ -63,7 +63,7 @@ public class FinalLevel extends World
         GreenfootSound sound = new GreenfootSound("Boss.mp3");
         sound.setVolume(100);
         sound.play();
-        addObject(new FinalBoss(main2), 600, 100);
+        addObject(new FinalBoss(main2, score), 600, 100);
         score++;
         break;
     }
@@ -79,7 +79,7 @@ public class FinalLevel extends World
     }
     public void time(){
         if(timer > -1){
-       timer--;
+            timer--;
     }
      }
 }

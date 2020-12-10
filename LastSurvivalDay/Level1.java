@@ -23,10 +23,8 @@ public class Level1 extends World
         super(1000, 600, 1);
         /* Create a new world with 1000x600 cells with a cell size of 1x1 pixels.*/
         addObject(main, 325, 180);
-        showText("Level 1, Forest",70,10);
-        
+        setPaintOrder(Contour.class,Character.class,Zombies2.class,Brute.class,Rifle.class,Shotgun.class,Ammo2.class,Car.class,Van.class,Smoke.class,Lamp.class);
         prepare();
-        
     }
 
     /**
@@ -38,7 +36,6 @@ public class Level1 extends World
         MiniBoss();
         showText("Kills: " + score, 35, 550);
         time();
-        
         
     }
     //spawns the zombies
@@ -75,18 +72,20 @@ public class Level1 extends World
         
     }
     
-     /**
+    /**
      * Prepare the world for the start of the program. That is: create the initial objects and add them to the world.
      */
     private void prepare()
-        {
+    {
         score = 0;
+        Contour contour = new Contour();
+        addObject(contour,503,306);
     }
     
     private void time(){
         if(timer>0){
         showText("Timer: " + timer, 800, 10);
         timer--;
-    }
+        }
     }
 }

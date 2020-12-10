@@ -19,6 +19,9 @@ public class Death extends World
         super(600, 400, 1); 
         showText("YOU DIED", 300, 200);
         showText("Press space to return to the main menu", 300, 250);
+        GreenfootSound deathSound = new GreenfootSound("DeathSound.wav");
+        deathSound.setVolume(70);
+        deathSound.play();
         
     }
     //resets the ammo for next play session

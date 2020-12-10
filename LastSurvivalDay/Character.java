@@ -23,6 +23,7 @@ public class Character extends Actor
     public static int rifleAmmo=50;
     public static int shotgunAmmo=30;
     private int button;
+    
     /**
      * stores the image for the character and the character while he is shooting in variables
      */
@@ -132,6 +133,9 @@ public class Character extends Actor
          }
         if (!shooting && Greenfoot.mousePressed(null)) shooting = true;
         if(shootTime%7==0&&shooting==true) {
+            GreenfootSound rifleSound = new GreenfootSound("RifleSound.wav");
+            rifleSound.setVolume(50);
+            rifleSound.play();
             setImage(rifleShooting);
             getWorld().addObject(new Rifle(getRotation()), getX(), getY());
             rifleAmmo--;
@@ -164,6 +168,9 @@ public class Character extends Actor
            button = mouse.getButton();   
             if(button == 1 && Greenfoot.mouseClicked(null))  
             { 
+                GreenfootSound shotgunSound = new GreenfootSound("ShotgunSound.wav");
+                shotgunSound.setVolume(50);
+                shotgunSound.play();
                 getWorld().addObject(new Shotgun(getRotation()), getX(), getY());
                 getWorld().addObject(new Shotgun(getRotation()+5), getX(), getY());
                 getWorld().addObject(new Shotgun(getRotation()-5), getX(), getY());

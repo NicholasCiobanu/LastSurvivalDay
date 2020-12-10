@@ -20,8 +20,9 @@ public class FinalBoss extends Actor
      * Act - do whatever the FinalBoss wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public FinalBoss(Barrier main)
+    public FinalBoss(Barrier main,int score)
     {
+        this.score=score;
         wire = main;
         image1 = new GreenfootImage("Final_Throw.png");
         image2= new GreenfootImage("Final_Throw2.png");

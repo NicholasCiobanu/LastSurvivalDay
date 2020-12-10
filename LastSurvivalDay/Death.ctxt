@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Death
-comment0.text=\n\ This\ is\ the\ end\ game\ screen\n\ \n\ @author\ Nicholas\ Ciobanu\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ This\ is\ the\ end\ game\ screen\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Death()
-comment1.text=\n\ Tells\ the\ player\ they\ died\n\ \n
+comment1.text=\r\n\ Tells\ the\ player\ they\ died\r\n\ \r\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
