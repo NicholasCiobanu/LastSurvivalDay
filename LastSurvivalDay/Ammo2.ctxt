@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Ammo2
-comment0.text=\r\n\ Ammo\ class\ for\ 2nd\ level\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Ammo\ class\ for\ 2nd\ level\n\ \n\ @author\ Nicholas\ Ciobanu\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ method\r\n
+comment1.text=\n\ Act\ method\n
 comment2.params=
 comment2.target=void\ location()
 comment3.params=

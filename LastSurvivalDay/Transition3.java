@@ -33,7 +33,9 @@ public class Transition3 extends World
       
     }
     //moves to level 3 after the user presses space
-    public void checkSpace(){
+    /**
+     * This method transitions from level4 to the final level 
+     */public void checkSpace(){
         
         if (Greenfoot.isKeyDown("space")) {
             Greenfoot.setWorld(new FinalLevel(score));

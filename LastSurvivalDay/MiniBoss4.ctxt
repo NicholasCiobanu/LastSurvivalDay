@@ -1,17 +1,20 @@
 #BlueJ class context
 comment0.target=MiniBoss4
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MiniBoss4\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ MiniBoss4\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=main\ score
 comment1.target=MiniBoss4(Character,\ int)
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Zombies\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Zombies\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ checkCollision()
+comment3.text=\n\ This\ method\ makes\ the\ miniboss\ lose\ health\ if\ he\ is\ hit\ by\ any\ of\ these.\ Also\ if\ he\ \n\ touches\ the\ character.\n
 comment4.params=
 comment4.target=void\ switchImage()
 comment5.params=
 comment5.target=void\ moveAround()
+comment5.text=\n\ This\ method\ makes\ the\ miniboss\ move\ towards\ the\ player\n
 comment6.params=
 comment6.target=void\ checkEndLevel()
+comment6.text=\n\ This\ method\ makes\ the\ level\ end\ once\ the\ miniboss\ is\ dead\n
 numComments=7

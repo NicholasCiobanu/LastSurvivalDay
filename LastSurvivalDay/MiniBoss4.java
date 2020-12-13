@@ -36,7 +36,10 @@ public class MiniBoss4 extends Actor
        checkCollision();
        checkEndLevel();
     }    
-    private void checkCollision()
+    /**
+     * This method makes the miniboss lose health if he is hit by any of these. Also if he 
+     * touches the character.
+     */private void checkCollision()
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
         Actor shotgun = getOneIntersectingObject(Shotgun.class);
@@ -72,12 +75,16 @@ public class MiniBoss4 extends Actor
         }
     }
     }
-    public void moveAround()
+    /**
+     * This method makes the miniboss move towards the player
+     */public void moveAround()
     {
         move(Greenfoot.getRandomNumber(5));
         turnTowards(player.getX(), player.getY());
     } 
-    public void checkEndLevel(){
+    /**
+     * This method makes the level end once the miniboss is dead
+     */public void checkEndLevel(){
         if(MB4health==0){
             Greenfoot.setWorld(new Transition3(score));
             

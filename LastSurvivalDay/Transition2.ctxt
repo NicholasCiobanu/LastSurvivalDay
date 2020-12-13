@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Transition2
-comment0.text=\r\n\ Transition\ from\ level\ 2\ to\ 3\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Transition\ from\ level\ 2\ to\ 3\n\ \n\ @author\ Nicholas\ Ciobanu\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=score
 comment1.target=Transition2(int)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Transition2.\r\n\ \r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Transition2.\n\ \n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=

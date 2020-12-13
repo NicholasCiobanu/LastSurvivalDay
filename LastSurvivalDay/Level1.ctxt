@@ -1,19 +1,19 @@
 #BlueJ class context
 comment0.target=Level1
-comment0.text=\r\n\ This\ is\ the\ first\ level\r\n\ @author\ Alvin\ Algos,\ Nicholas\ Ciobanu\r\n
+comment0.text=\n\ This\ is\ the\ first\ level\n\ @author\ Alvin\ Algos,\ Nicholas\ Ciobanu\n
 comment1.params=
 comment1.target=Level1()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ \r\n
+comment2.text=\n\ \n
 comment3.params=
 comment3.target=void\ spawns()
 comment4.params=
 comment4.target=void\ MiniBoss()
 comment5.params=
 comment5.target=void\ prepare()
-comment5.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
+comment5.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
 comment6.params=
 comment6.target=void\ time()
 comment7.params=

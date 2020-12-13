@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Level4 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vlad Dumitrescu) 
+ * @version (Final Version)
  */
 public class Level4 extends World
 {
@@ -45,6 +45,10 @@ public class Level4 extends World
         
     }
     //spawns the zombies
+    
+    /**
+     * this method spawns the zombies at certain coordinates on the map
+     */
     public void spawns()
     {        int location = 1+ Greenfoot.getRandomNumber(4);
              if(Greenfoot.getRandomNumber(100)<3 && count<25){
@@ -76,14 +80,20 @@ public class Level4 extends World
         score = 0;
     }
     
-    private void time()
+    /**
+     * this shows the timer on the level
+     */private void time()
     {
         if(timer>0){
         showText("Timer: " + timer, 800, 10);
         timer--;
     }
     }
-    public void MiniBoss4(){
+    
+    
+    /**
+     * This class spawns the MiniBoss4 when the time reaches half
+     */public void MiniBoss4(){
         while(timer==750){
             
            addObject(new MiniBoss4(main, score), 800, 600);
