@@ -17,11 +17,10 @@ public class Death extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        //display text
         showText("YOU DIED", 300, 200);
         showText("Press space to return to the main menu", 300, 250);
-        GreenfootSound deathSound = new GreenfootSound("DeathSound.wav");
-        deathSound.setVolume(70);
-        deathSound.play();
+        playDeathSound();
         
     }
     //resets the ammo for next play session
@@ -30,10 +29,17 @@ public class Death extends World
         Character.shotgunAmmo=50;
         checkKey();
     }
+    //returns to menu screen after user presses space
     public void checkKey()
     {
         if(Greenfoot.isKeyDown("space")){
             Greenfoot.setWorld(new MenuScreen());
         }
+    }
+    private void playDeathSound(){
+        
+        GreenfootSound deathSound = new GreenfootSound("DeathSound.wav");
+        deathSound.setVolume(70);
+        deathSound.play();
     }
 }

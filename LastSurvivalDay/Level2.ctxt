@@ -19,4 +19,6 @@ comment7.params=
 comment7.target=void\ endLevel()
 comment8.params=
 comment8.target=void\ showTime()
-numComments=9
+comment9.params=
+comment9.target=void\ showScore()
+numComments=10

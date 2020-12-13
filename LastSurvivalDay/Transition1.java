@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Transition1 extends World
 {
+    //initialize variables
     int score;
     /**
      * Creates message for user
@@ -18,6 +19,7 @@ public class Transition1 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 400, 1);
         this.score=score;
+        //display score and story
         showText("You managed to escape the forest, but just barely. ",350,100);
         showText("Now, you start going towards the city in hope of finding others just like you...",350,150);
         showText("Survivors in a corrupted world",350,200);
@@ -25,11 +27,7 @@ public class Transition1 extends World
         showText("YOUR SCORE IS:"+score,350,350);
     }
     public void act(){
-        
         checkSpace();
-        
-        
-        
     }
     //moves to level 2 after the user presses space
     public void checkSpace(){

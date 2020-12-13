@@ -3,16 +3,16 @@ import greenfoot.*;
 
 /**
  * This is the first level
- * @author Alvin Algos
+ * @author Alvin Algos, Nicholas Ciobanu
  */
 public class Level1 extends World
 {
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
+    //initializing variables
     public static int score = 0;
     protected int spawnSpeed = 3;
     protected int speedRate = 0;
     private int timer = 3800;
-    
     public Character main =  new  Character();
 
     /**
@@ -34,11 +34,11 @@ public class Level1 extends World
     {
         spawns();
         MiniBoss();
-        showText("Kills: " + score, 35, 550);
+        showScore();
         time();
         
     }
-    //spawns the zombies
+    //spawns the zombies until timer reaches 0
     public void spawns()
     {
              int location = 1+ Greenfoot.getRandomNumber(4);
@@ -81,11 +81,15 @@ public class Level1 extends World
         Contour contour = new Contour();
         addObject(contour,503,306);
     }
-    
+    //shows the timer
     private void time(){
         if(timer>0){
         showText("Timer: " + timer, 800, 10);
         timer--;
         }
+    }
+    //shows the score
+    private void showScore(){
+        showText("Kills: " + score, 35, 550);
     }
 }

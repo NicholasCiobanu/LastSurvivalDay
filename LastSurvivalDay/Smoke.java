@@ -8,10 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Smoke extends Actor
 {
+    //initializing variables
     GifImage Smoke=new GifImage("Smoke.gif");
     /**
-     * Act - do whatever the Smoke wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Moves left to simulate side scrolling effect
+     * Removes itself when it reaches end of screen to the left
      */
     public void act() 
     {

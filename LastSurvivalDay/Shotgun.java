@@ -38,7 +38,7 @@ public class Shotgun extends Actor
         
     }
     /**
-     * Removes the bullet when it touches the edge of the screen
+     * Removes the bullet when it touches the edge of the screen or after a short time
      */
     public void removeConditions(){
         if(isAtEdge()||bulletTime==15){

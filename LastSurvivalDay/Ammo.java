@@ -13,6 +13,7 @@ public class Ammo extends Actor
      */
     public void act() 
     {
+        //removes itself when it touches the character
         if(isTouching(Character.class))
         {
             getWorld().removeObject(this);

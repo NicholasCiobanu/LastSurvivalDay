@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Brute extends Actor
 {
+    //initializing variables
     int switchImage = 0;
     int count;
     int health = 5;
@@ -32,11 +33,13 @@ public class Brute extends Actor
        moveAround();
        checkCollision();
     }    
+    //interactions when brute touches bullets
     private void checkCollision()
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
         Actor shotgun =getOneIntersectingObject(Shotgun.class);
-        Actor c = getOneIntersectingObject(Character.class);
+        
+        //loses health when hit by a bullet and deletes bullet
         if(rifle != null){
             Level2 road = (Level2) getWorld();
             road.removeObject(rifle);
@@ -47,21 +50,24 @@ public class Brute extends Actor
             road.removeObject(shotgun);
             health--;
         }
-      
+        //actions when health reaches 0
         if(health <= 0)
         {
+            //increment score
             LastSurvivalDay.score++;
+            //chance of spawning an ammo crate
             if(Greenfoot.getRandomNumber(3)==1){
                 
                 getWorld().addObject(new Ammo2(),getX(),getY());
             
             
             }
+            //removes the zombie from the world
             getWorld().removeObject(this);
             
         }
     }
-    
+    //makes the zombie look like it walks
     public void switchImage()
     {   
         count++;
@@ -74,7 +80,7 @@ public class Brute extends Actor
             setImage(image1);
         }
     }
-    
+    //always moves towards the player
     public void moveAround()
     {
         move(Greenfoot.getRandomNumber(3));

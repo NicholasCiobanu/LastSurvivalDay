@@ -9,19 +9,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ammo2 extends Actor
 {
     /**
-     * Removes itself when it touches the character or reaches end of screen to the left
-     * Moves left to simulate side scrolling effect
+     * Act method
      */
     public void act() 
     {
         location();
-        if (getX() == 0||isTouching(Character.class)) {
-            getWorld().removeObject(this);
-        }
+        removeSelf();
         
     }    
+    //Moves left to simulate side scrolling effect
     public void location(){
         setLocation(getX() - 1, getY());
     
+    }
+    //Removes itself when it touches the character or reaches end of screen to the left
+    private void removeSelf(){
+    if (getX() == 0||isTouching(Character.class)) {
+            getWorld().removeObject(this);
+        }
     }
 }

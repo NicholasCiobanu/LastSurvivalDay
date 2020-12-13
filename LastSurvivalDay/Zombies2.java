@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Zombies here.
+ * This is the zombie for level 2
  * 
- * @author (your name) 
+ * @author Alvin Algos (Adapted to level 2 by Nicholas Ciobanu)
  * @version (a version number or a date)
  */
 public class Zombies2 extends Actor
@@ -14,7 +14,7 @@ public class Zombies2 extends Actor
     private GreenfootImage image1 = null; 
     private GreenfootImage image2 = null;
     Character player;
-    Level2 LastSurvivalDay;
+    Level2 LastSurvivalDay2;
     /**
      * Act - do whatever the Zombies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -32,11 +32,12 @@ public class Zombies2 extends Actor
        moveAround();
        checkCollision();
     }    
+    //interactions when zombie touches bullets
     private void checkCollision()
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
         Actor shotgun =getOneIntersectingObject(Shotgun.class);
-        Actor c = getOneIntersectingObject(Character.class);
+        //loses health when hit by a bullet and deletes bullet
         if(rifle != null){
             Level2 road = (Level2) getWorld();
             road.removeObject(rifle);
@@ -47,16 +48,18 @@ public class Zombies2 extends Actor
             road.removeObject(shotgun);
             health--;
         }
-      
+        //actions when health reaches 0
         if(health <= 0)
         {
-            LastSurvivalDay.score++;
+            //increment score
+            LastSurvivalDay2.score++;
             if(Greenfoot.getRandomNumber(4)==1){
-                
+                //chance of spawning an ammo crate
                 getWorld().addObject(new Ammo2(),getX(),getY());
             
             
             }
+            //plays a death sound and removes the zombie from the world
             GreenfootSound sound = new GreenfootSound("Grunt1.mp3");
             sound.setVolume(20);
             sound.play();
@@ -64,7 +67,7 @@ public class Zombies2 extends Actor
             
         }
     }
-    
+    //makes the zombie look like it walks
     public void switchImage()
     {   
         count++;
@@ -77,7 +80,7 @@ public class Zombies2 extends Actor
             setImage(image1);
         }
     }
-    
+    //always moves towards the player
     public void moveAround()
     {
         move(Greenfoot.getRandomNumber(4));

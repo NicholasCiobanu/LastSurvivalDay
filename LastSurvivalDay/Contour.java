@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Contour here.
+ * Blocks the view in the forest for atmosphere.
  * 
  * @author (your name) 
  * @version (a version number or a date)

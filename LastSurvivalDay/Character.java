@@ -157,7 +157,7 @@ public class Character extends Actor
     
     }
     /**
-     * Spwans 3 shotgun bullets that go in the 3 different directions, changes image of character when shooting
+     * Spawns 3 shotgun bullets that go in the 3 different directions, changes image of character when shooting
      */
     public void shootShotgun(){
         if(shotgunAmmo!=0){

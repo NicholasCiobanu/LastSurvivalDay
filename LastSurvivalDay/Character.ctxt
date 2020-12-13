@@ -39,5 +39,5 @@ comment8.target=void\ Munitions()
 comment8.text=\r\n\ Keeps\ track\ of\ the\ ammo\ and\ increases\ it\ when\ the\ character\ touches\ an\ ammo\ pack\r\n
 comment9.params=
 comment9.target=void\ shootShotgun()
-comment9.text=\r\n\ Spwans\ 3\ shotgun\ bullets\ that\ go\ in\ the\ 3\ different\ directions,\ changes\ image\ of\ character\ when\ shooting\r\n
+comment9.text=\r\n\ Spawns\ 3\ shotgun\ bullets\ that\ go\ in\ the\ 3\ different\ directions,\ changes\ image\ of\ character\ when\ shooting\r\n
 numComments=14
