@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class FinalLevel here.
+ * The is the final level for the game.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -27,6 +27,9 @@ public class FinalLevel extends World
         prepare();
         this.score= score;
     }
+    /**
+     * Calls the methods for this class
+     */
     public void act()
     {
         spawns();
@@ -34,7 +37,9 @@ public class FinalLevel extends World
         time();
         showText("Kills: " + score, 35, 550);
     }
-    
+    /**
+     * Spawns the zombies
+     */
     public void spawns()
     {
             int location = 1+ Greenfoot.getRandomNumber(4);
@@ -56,6 +61,9 @@ public class FinalLevel extends World
           count++;
      }
     }
+    /**
+     * Spawns the final boss
+     */
     public void FinalBoss()
     {
         while(timer == 1)
@@ -68,7 +76,9 @@ public class FinalLevel extends World
         break;
     }
     }
-    
+    /**
+     * Spawns what is needed in the beggining of the level
+     */
     private void prepare()
     {
         score = 0;
@@ -77,6 +87,9 @@ public class FinalLevel extends World
         addObject(new AmmoCrate(), 250, 620);
         addObject(new Button(), 400, 625);
     }
+    /**
+     * Reduces the timer
+     */
     public void time(){
         if(timer > -1){
             timer--;

@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.target=Barrier
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Barrier\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ is\ the\ barrier\ class.\ This\ actor\ determines\ if\ you\ win\ or\ not.\ If\ it\ gets\ destroyed\ you\ lose.\r\n\ \r\n\ @author\ (Alvin\ Alagos\ Eli)\ \r\n\ @version\ (Final)\r\n
 comment1.params=
 comment1.target=Barrier()
+comment1.text=\r\n\ This\ method\ scales\ the\ image\ to\ a\ bigger\ size\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Barrier\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment3.params=
 comment3.target=void\ checkCollision()
+comment3.text=\r\n\ Checks\ if\ enemy\ classes\ collide\ with\ the\ barrier\ class\r\n
 comment4.params=
 comment4.target=void\ setLocation()
+comment4.text=\r\n\ Sets\ the\ location\ of\ the\ barrier\r\n
 numComments=5

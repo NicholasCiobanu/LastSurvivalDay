@@ -1,17 +1,22 @@
 #BlueJ class context
 comment0.target=FinalLevel
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ FinalLevel\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ is\ the\ final\ level\ for\ the\ game.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=score
 comment1.target=FinalLevel(int)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ FinalLevel.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Calls\ the\ methods\ for\ this\ class\r\n
 comment3.params=
 comment3.target=void\ spawns()
+comment3.text=\r\n\ Spawns\ the\ zombies\r\n
 comment4.params=
 comment4.target=void\ FinalBoss()
+comment4.text=\r\n\ Spawns\ the\ final\ boss\r\n
 comment5.params=
 comment5.target=void\ prepare()
+comment5.text=\r\n\ Spawns\ what\ is\ needed\ in\ the\ beggining\ of\ the\ level\r\n
 comment6.params=
 comment6.target=void\ time()
+comment6.text=\r\n\ Reduces\ the\ timer\r\n
 numComments=7

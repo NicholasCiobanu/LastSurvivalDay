@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class FinalLevelCharacter here.
+ * This is character class but designed to match the mechanics needed for the final level
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class FinalLevelCharacter extends SmoothMover
 {

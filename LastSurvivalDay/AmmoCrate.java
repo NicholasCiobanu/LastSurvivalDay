@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class AmmoCrate here.
+ * This class is the ammoCrate that will allow you to refill your ammo in the FinalLevel
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class AmmoCrate extends SmoothMover
 {

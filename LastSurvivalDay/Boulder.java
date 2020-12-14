@@ -1,18 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boulder here.
+ * The boulder class is meant to be thrown towards the barrier class by the final boss.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class Boulder extends SmoothMover
 {
     int health = 5;
     FinalLevel LastSurvivalDay;
     /**
-     * Act - do whatever the Boulder wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Scales the image to a bigger size.
      */
     public Boulder()
     {
@@ -21,20 +20,32 @@ public class Boulder extends SmoothMover
         int myNewWidth = (int)myImage.getWidth()*3;
         myImage.scale(myNewWidth, myNewHeight);
     }
+    /**
+     * Calls the methods of this class
+     */
     public void act() 
     {
         move();
         faceTo();
         health();
     }    
+    /**
+     * Sets the speed of the boulders to 1
+     */
     public void move()
     {
         move(1);
     }
+    /**
+     * Sets the direction of the boulder
+     */
     public void faceTo()
     {
         turnTowards(610, 605);
     }
+    /**
+     * Checks if bullets collides with the boulder and removes health until 0
+     */
     public void health()
     {
       Actor rifle = getOneIntersectingObject(Rifle.class);

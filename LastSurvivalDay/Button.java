@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Button here.
+ * This is a button to press to summon hounds
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class Button extends SmoothMover
 {

@@ -1,15 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Barrier here.
+ * This is the barrier class. This actor determines if you win or not. If it gets destroyed you lose.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class Barrier extends SmoothMover
 {
     int health = 5;
     FinalLevel LastSurvivalDay;
+    /**
+     * This method scales the image to a bigger size
+     */
     public Barrier()
     {
         GreenfootImage myImage = getImage();
@@ -26,6 +29,9 @@ public class Barrier extends SmoothMover
         setLocation();
         checkCollision();
     }    
+    /**
+     * Checks if enemy classes collide with the barrier class
+     */
     private void checkCollision()
     {
         Actor z = getOneIntersectingObject(ZombiesFinal.class);
@@ -48,6 +54,9 @@ public class Barrier extends SmoothMover
             Greenfoot.setWorld(new Death());
         }
     }
+    /**
+     * Sets the location of the barrier
+     */
     public void setLocation()
     {
         setLocation(getX(), getY());

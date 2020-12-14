@@ -1,15 +1,19 @@
 #BlueJ class context
 comment0.target=Zombies
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Zombies\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ class\ is\ the\ zombies\ in\ Level\ 1.\ These\ zombies\ are\ coded\ to\ match\ the\ first\ level.\r\n\ \r\n\ @author\ (Alvin\ Alagos\ Eli)\ \r\n\ @version\ (Final)\r\n
 comment1.params=main
 comment1.target=Zombies(Character)
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Zombies\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Calls\ the\ methods\ of\ this\ class\r\n
 comment3.params=
 comment3.target=void\ checkCollision()
+comment3.text=\r\n\ Checks\ collision\ between\ actors\ and\ this\ class\r\n
 comment4.params=
 comment4.target=void\ switchImage()
+comment4.text=\r\n\ Creates\ the\ illusion\ of\ animation\r\n
 comment5.params=
 comment5.target=void\ moveAround()
+comment5.text=\r\n\ Determines\ the\ speed\ of\ the\ zombies\ and\ sets\ their\ target\r\n
 numComments=6

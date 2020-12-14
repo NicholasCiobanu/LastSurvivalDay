@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class ZombiesFinal here.
  * 
- * @author Alvin Algos
- * @version (a version number or a date)
+ * @author Alvin Alagos Eli
+ * @version (Final)
  */
 public class ZombiesFinal extends SmoothMover
 {
@@ -26,12 +26,18 @@ public class ZombiesFinal extends SmoothMover
         image2 =  new  GreenfootImage("zombie2.png");
         setImage(image1);
     }
+    /**
+     * Calls methods for this class
+     */
     public void act() 
     {
        switchImage();
        moveAround();
        checkCollision();
     }    
+    /**
+     * Checks for collision with other actors
+     */
     private void checkCollision()
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
@@ -58,7 +64,9 @@ public class ZombiesFinal extends SmoothMover
             
         }
     }
-    
+    /**
+     * Gives the illusion of animation for zombies
+     */
     public void switchImage()
     {   
         if(Greenfoot.getRandomNumber(10)== 1)
@@ -73,6 +81,9 @@ public class ZombiesFinal extends SmoothMover
         }
      }
     }
+    /**
+     * Determines the speed of the zombies and sets the target for the zombies.
+     */
     public void moveAround()
     {
         move(Greenfoot.getRandomNumber(4));

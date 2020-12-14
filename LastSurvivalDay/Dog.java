@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Dog here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class Dog extends SmoothMover
 {
@@ -21,12 +21,18 @@ public class Dog extends SmoothMover
         image2 =  new  GreenfootImage("Hound2.png");
         setImage(image1);
     }
+    /**
+     * Calls the methods in this class
+     */
     public void act() 
     {
         switchImage();
         moveRandomly();
         checkCollision();
-    }    
+    }   
+    /**
+     * Checks collision between this class and other classes.
+     */
     public void checkCollision()
     {
         Actor z = getOneIntersectingObject(ZombiesFinal.class);
@@ -40,6 +46,9 @@ public class Dog extends SmoothMover
             
         }
     }
+    /**
+     * Sets random movement for hound class and turns their direction once they it the border
+     */
     public void moveRandomly()
     {
         int move = 2+Greenfoot.getRandomNumber(5);
@@ -57,6 +66,9 @@ public class Dog extends SmoothMover
             turn(180);
         }
     }
+    /**
+     * Creates the illusion of animation
+     */
      public void switchImage()
     {   
         if(Greenfoot.getRandomNumber(10)== 1)

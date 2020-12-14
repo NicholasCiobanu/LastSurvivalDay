@@ -1,15 +1,19 @@
 #BlueJ class context
 comment0.target=Dog
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Dog\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Dog\ here.\r\n\ \r\n\ @author\ (Alvin\ Alagos\ Eli)\ \r\n\ @version\ (Final)\r\n
 comment1.params=
 comment1.target=Dog()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Dog\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Calls\ the\ methods\ in\ this\ class\r\n
 comment3.params=
 comment3.target=void\ checkCollision()
+comment3.text=\r\n\ Checks\ collision\ between\ this\ class\ and\ other\ classes.\r\n
 comment4.params=
 comment4.target=void\ moveRandomly()
+comment4.text=\r\n\ Sets\ random\ movement\ for\ hound\ class\ and\ turns\ their\ direction\ once\ they\ it\ the\ border\r\n
 comment5.params=
 comment5.target=void\ switchImage()
+comment5.text=\r\n\ Creates\ the\ illusion\ of\ animation\r\n
 numComments=6

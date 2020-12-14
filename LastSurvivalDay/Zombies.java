@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Zombies here.
+ * This class is the zombies in Level 1. These zombies are coded to match the first level.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class Zombies extends SmoothMover
 {
@@ -26,12 +26,18 @@ public class Zombies extends SmoothMover
         image2 =  new  GreenfootImage("zombie2.png");
         setImage(image1);
     }
+    /**
+     * Calls the methods of this class
+     */
     public void act() 
     {
        switchImage();
        moveAround();
        checkCollision();
     }    
+    /**
+     * Checks collision between actors and this class
+     */
     private void checkCollision()
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
@@ -64,7 +70,9 @@ public class Zombies extends SmoothMover
             
         }
     }
-    
+    /**
+     * Creates the illusion of animation
+     */
     public void switchImage()
     {   
         if(Greenfoot.getRandomNumber(10)== 1)
@@ -79,6 +87,9 @@ public class Zombies extends SmoothMover
         }
     }
     }
+    /**
+     * Determines the speed of the zombies and sets their target
+     */
     public void moveAround()
     {
         move(Greenfoot.getRandomNumber(4));

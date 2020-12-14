@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class FinalBoss here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class FinalBoss extends SmoothMover
 {
@@ -33,11 +33,16 @@ public class FinalBoss extends SmoothMover
         myImage.scale(myNewWidth, myNewHeight);
         
     }
+    /**
+     * Allows me to call this class in other classes
+     */
     public FinalBoss()
     {
         
     }
-   
+    /**
+     * Calls the methods in this class
+     */
     public void act() 
     {
         HealthBar();
@@ -47,7 +52,9 @@ public class FinalBoss extends SmoothMover
         spawns();
         
     }    
-    
+    /**
+     * This method allows the boss to dispense boulders and also animate his throws
+     */
     public void attack()
     {
         int launch = 1 + Greenfoot.getRandomNumber(100);
@@ -65,20 +72,30 @@ public class FinalBoss extends SmoothMover
         }
         
     }
-    
+    /**
+     * Set the direction
+     */
     public void faceTo()
     {
         turnTowards(610, 605);
     }  
-    
+    /**
+     * Gets the X location
+     */
     public int getPositionX()
     {
         return getX();
     }
+    /**
+     * Gets the Y position
+     */
     public int getPositionY()
     {
         return getY();
     }
+    /**
+     * Checks collision with bullets
+     */
     public void checkCollision()
     {
         Actor rifle = getOneIntersectingObject(Rifle.class);
@@ -106,6 +123,9 @@ public class FinalBoss extends SmoothMover
             Greenfoot.setWorld(new EndTransition(score));
         }
     }
+    /**
+     * This method is for spawning minions(zombies) when the boss is under 50% of its health
+     */
     public void spawns()
     {
         if (health < 50)
@@ -130,6 +150,9 @@ public class FinalBoss extends SmoothMover
      }
         }
     }
+    /**
+     * This sets the right picture for the health amount
+     */
     public void HealthBar()
     {
         Actor h100 = getOneIntersectingObject(Health100.class);

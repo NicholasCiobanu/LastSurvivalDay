@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class EndTransition here.
+ * Final Transition after final level.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alvin Alagos Eli) 
+ * @version (Final)
  */
 public class EndTransition extends World
 {
     int score;
     /**
-     * Constructor for objects of class EndTransition.
+     * Sets the text on the screen.
      * 
      */
     public EndTransition(int score)
@@ -25,10 +25,16 @@ public class EndTransition extends World
         showText("Your score is: " + score,500,400);
         showText("Press Esc to return to the main menu",500,500);
     }
+    /**
+     * Calls the methods
+     */
     public void act()
     {
         checkKey();
     }
+    /**
+     * Checks if esc key is pressed
+     */
     public void checkKey(){
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new MenuScreen());
