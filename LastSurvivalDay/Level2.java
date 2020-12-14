@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * This is the second level which is a side scroller type
  * 
  * @author Nicholas Ciobanu
- * @version (a version number or a date)
+ * @version final
  */
 public class Level2 extends World
 {

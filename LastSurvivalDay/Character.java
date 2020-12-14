@@ -6,7 +6,7 @@ import greenfoot.*;
  * and switch images when switching guns. It dies when it touches a 
  * zombie or a boss. 
  * @author Nicholas Ciobanu)
- * @version 11/25/20
+ * @version final
  * 
  */
 public class Character extends Actor
