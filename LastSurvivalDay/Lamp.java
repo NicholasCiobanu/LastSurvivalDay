@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Nicholas Ciobanu
  * @version (a version number or a date)
  */
-public class Lamp extends Actor
+public class Lamp extends SmoothMover
 {
     /**
      * Moves left to simulate side scrolling effect

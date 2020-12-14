@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Nicholas Ciobanu
  * @version (a version number or a date)
  */
-public class Ammo2 extends Actor
+public class Ammo2 extends SmoothMover
 {
     /**
      * Act method

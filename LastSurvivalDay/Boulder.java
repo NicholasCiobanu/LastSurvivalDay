@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Boulder extends Actor
+public class Boulder extends SmoothMover
 {
     int health = 5;
     FinalLevel LastSurvivalDay;

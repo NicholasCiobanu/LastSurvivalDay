@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Nicholas Ciobanu
  * @version (a version number or a date)
  */
-public class Ammo extends Actor
+public class Ammo extends SmoothMover
 {
     /**
      * All this class does is remove itself once it touches the character

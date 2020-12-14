@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Nicholas Ciobanu
  * @version 11/25/20
  */
-public class Rifle extends Actor
+public class Rifle extends SmoothMover
 {
     //initializing the speed and bullet image
     private int speed=15;

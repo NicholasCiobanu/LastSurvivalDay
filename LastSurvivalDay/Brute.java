@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Alvin Algos 
  * @version (a version number or a date)
  */
-public class Brute extends Actor
+public class Brute extends SmoothMover
 {
     //initializing variables
     int switchImage = 0;

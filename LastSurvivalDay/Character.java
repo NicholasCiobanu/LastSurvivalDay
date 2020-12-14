@@ -9,7 +9,7 @@ import greenfoot.*;
  * @version final
  * 
  */
-public class Character extends Actor
+public class Character extends SmoothMover
 {
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
     public boolean shooting;

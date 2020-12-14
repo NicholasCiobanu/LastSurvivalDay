@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Alvin Algos (Adapted to level 2 by Nicholas Ciobanu)
  * @version (a version number or a date)
  */
-public class Zombies2 extends Actor
+public class Zombies2 extends SmoothMover
 {
     int switchImage = 0;
     int count;

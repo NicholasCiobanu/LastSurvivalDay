@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dog extends Actor
+public class Dog extends SmoothMover
 {
     private GreenfootImage image1 = null;
     private GreenfootImage image2 = null;

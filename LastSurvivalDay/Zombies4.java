@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Vlad Dumitrescu 
  * @version (a version number or a date)
  */
-public class Zombies4 extends Actor
+public class Zombies4 extends SmoothMover
 {
     int switchImage = 0;
     int count;

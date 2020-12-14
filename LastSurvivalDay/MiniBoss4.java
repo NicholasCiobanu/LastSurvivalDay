@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MiniBoss4 extends Actor
+public class MiniBoss4 extends SmoothMover
 {
     int switchImage = 0;
     int count;

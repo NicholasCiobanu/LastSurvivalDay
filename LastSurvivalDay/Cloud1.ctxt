@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Cloud1
-comment0.text=\n\ Part\ of\ decor\ for\ level\ 2\n\ \n\ @author\ Nicholas\ Ciobanu\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Part\ of\ decor\ for\ level\ 2\r\n\ \r\n\ @author\ Nicholas\ Ciobanu\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\n\ Moves\ left\ to\ simulate\ side\ scrolling\ effect\n\ Removes\ itself\ when\ it\ reaches\ end\ of\ screen\ to\ the\ left\n
+comment1.text=\r\n\ Moves\ left\ to\ simulate\ side\ scrolling\ effect\r\n\ Removes\ itself\ when\ it\ reaches\ end\ of\ screen\ to\ the\ left\r\n
 numComments=2

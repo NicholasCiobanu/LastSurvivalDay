@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FinalBoss extends Actor
+public class FinalBoss extends SmoothMover
 {
     Barrier wire;
     int health = 100;
